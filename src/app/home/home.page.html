@@ -1,20 +1,119 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="hero-image">
+    <ion-header class="ion-no-border" [translucent]="true">
+      <ion-toolbar>
+        <ion-title>
+          <img class="logo" src="../../assets/icon/images/sigla.png">
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="header" style="margin-top: 20px">
+      <h1 class="bio">Hi there! My name is Alex, and I am a computer science graduate, grown in the 
+        dot-com bubble with a contagious curiosity for photography and tech.</h1>
+    </div>
   </div>
+
+  <ion-row class="row-content">
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of columns.left"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <!-- to be added -->
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <strong class="strong-font">
+                  {{event.tag}}
+                </strong>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <img src={{event.image}} />
+        <ion-card-header>
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of columns.middle"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <!-- to be added -->
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <strong class="strong-font">
+                  {{event.tag}}
+                </strong>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <img src={{event.image}} />
+        <ion-card-header>
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of columns.right"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <!-- to be added -->
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <strong class="strong-font">
+                  {{event.tag}}
+                </strong>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <img src={{event.image}} />
+        <ion-card-header>
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <p class="tags">
+    <ion-chip outline color="primary" *ngFor="let tag of tags" class="chip-content">
+      <ion-label>#{{tag}}</ion-label>
+    </ion-chip>
+  </p>
+
+  <ion-footer class="bottom">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p class="title bottom-font">© alexdarie 2020</p>
+        </ion-col>
+        <ion-col>
+          <p class="contact bottom-font">Coded with Firebase.<br><br>
+          <p class="contact bottom-font bottom-align">The fastest (and most reliable) way to reach me is on Messenger: </p>
+          <p><a class="contact bottom-font link" href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
+        </ion-col>
+        <ion-col class="contact-last-col"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
 </ion-content>
