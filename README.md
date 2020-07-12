@@ -1,6 +1,12 @@
 # alexdarie-firebase
 Personal website https://alexdarie.me built with Ionic, hosted on Firebase and accessible through Namecheap.
 
+### Build Ionic for Browser
+
+```
+ionic cordova build browser
+```
+
 ### Custom domain setup
 
 Open the Firebase console > Hosting, then select "Add custom domain"
