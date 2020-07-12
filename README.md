@@ -4,7 +4,8 @@ Personal website https://alexdarie.me built with Ionic, hosted on Firebase and a
 ### Build Ionic for Browser
 
 ```
-ionic cordova build browser
+ionic build --prod --release
+firebase deploy
 ```
 
 ### Custom domain setup
