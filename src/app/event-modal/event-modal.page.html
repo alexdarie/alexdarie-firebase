@@ -1,0 +1,41 @@
+<ion-content fullscreen style="margin-top: 10px">
+  
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="dismiss()" class="fab-btn">
+      <ion-icon name="close" class="icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-col class="col-content">
+    <div class="story-content">
+      <h1 class="event-title">{{this.event.title}}</h1>
+      <h3>{{this.event.date}}</h3>
+      <p>{{this.event.description}}</p>
+    </div>
+
+    <!-- <ion-segment (ionChange)="segmentChanged($event)" value="pictures" style="margin-top: 35px">
+      <ion-segment-button value="story">
+        <ion-label>Background story</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="pictures">
+        <ion-label>Pictures</ion-label>
+      </ion-segment-button>
+    </ion-segment> -->
+  
+    <ion-row [ngClass]="{'show-story': currentSegment === 'story', 'hide-story': currentSegment !== 'story'}" class="row-content">
+      <ion-col class="col-content">
+        <div>
+          story
+        </div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row [ngClass]="{'show-pictures': currentSegment === 'pictures', 'hide-pictures': currentSegment !== 'pictures'}" class="row-content">
+      <ion-col class="col-content">
+        <img src={{image}} class="image-content" *ngFor="let image of event.postImages"/>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+  
+</ion-content>
+  

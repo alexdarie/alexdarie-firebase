@@ -1,14 +1,10 @@
 <ion-content [fullscreen]="true">
   <div class="hero-image">
-    <ion-header class="ion-no-border" [translucent]="true">
-      <ion-toolbar>
-        <ion-title>
-          <img class="logo" src="../../assets/icon/images/sigla.png">
-        </ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <ion-toolbar>
+      <img class="logo" src="../../assets/icon/images/sigla.png">
+    </ion-toolbar>
 
-    <div class="header" style="margin-top: 20px">
+    <div class="header">
       <h1 class="bio">Hi there! My name is Alex, and I am a computer science graduate, grown in the 
         dot-com bubble with a contagious curiosity for photography and tech.</h1>
     </div>
@@ -20,24 +16,29 @@
         <ion-grid>
           <ion-row>
             <ion-col class="col-align">
-              <!-- to be added -->
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <strong class="strong-font">
-                  {{event.tag}}
-                </strong>
+                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <img src={{event.image}} />
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable >
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
         <ion-card-header>
           <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description}}
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
@@ -46,24 +47,29 @@
         <ion-grid>
           <ion-row>
             <ion-col class="col-align">
-              <!-- to be added -->
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <strong class="strong-font">
-                  {{event.tag}}
-                </strong>
+                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <img src={{event.image}} />
-        <ion-card-header>
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable />
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
+        <ion-card-header class="pointer">
           <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description}}
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
@@ -76,20 +82,25 @@
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <strong class="strong-font">
-                  {{event.tag}}
-                </strong>
+                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <img src={{event.image}} />
-        <ion-card-header>
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable />
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
+        <ion-card-header class="pointer">
           <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description}}
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
@@ -97,7 +108,7 @@
 
   <p class="tags">
     <ion-chip outline color="primary" *ngFor="let tag of tags" class="chip-content">
-      <ion-label>#{{tag}}</ion-label>
+      <ion-label>{{tag}}</ion-label>
     </ion-chip>
   </p>
 
@@ -108,7 +119,7 @@
           <p class="title bottom-font">© alexdarie 2020</p>
         </ion-col>
         <ion-col>
-          <p class="contact bottom-font">Coded with Firebase.<br><br>
+          <p class="contact bottom-font">Coded with love, Ionic and Firebase.<br><br>
           <p class="contact bottom-font bottom-align">The fastest (and most reliable) way to reach me is on Messenger: </p>
           <p><a class="contact bottom-font link" href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
         </ion-col>

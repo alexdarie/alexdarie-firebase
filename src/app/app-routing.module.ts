@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'event-modal',
+    loadChildren: () => import('./event-modal/event-modal.module').then( m => m.EventModalPageModule)
+  },
 ];
 
 @NgModule({
