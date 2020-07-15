@@ -12,7 +12,7 @@ export class HomePage {
 
   portraitPictures = [
     {
-      tag: '#ec',
+      tag: 'ec',
       tagColor: 'secondary',
       image: '../../assets/icon/images/concert/FRO_1186.jpg',
       viewStatus: 'preview',
@@ -38,7 +38,7 @@ export class HomePage {
       'be kind enough to guide you and let you know when something important will happen.'
     },
     {
-      tag: '#people',
+      tag: 'people',
       tagColor: 'secondary',
       image: '../../assets/icon/images/concert/FRO_1363.jpg',
       viewStatus: 'preview',
@@ -56,7 +56,7 @@ export class HomePage {
       description: ''
     },
     {
-      tag: '#people',
+      tag: 'people',
       tagColor: 'primary',
       image: '../../assets/icon/images/concert/FRO_3780.jpg',
       viewStatus: 'preview',
@@ -73,7 +73,7 @@ export class HomePage {
       description: ''
     },
     {
-      tag: '#people',
+      tag: 'people',
       tagColor: 'secondary',
       image: '../../assets/icon/images/concert/FRO_0637.jpg',
       viewStatus: 'preview',
@@ -94,7 +94,7 @@ export class HomePage {
       description: 'More here..'
     },
     {
-      tag: '#summerwell',
+      tag: 'summerwell',
       tagColor: 'primary',
       image: '../../assets/icon/images/concert/FRO_6676.jpg',
       viewStatus: 'static',
@@ -105,7 +105,7 @@ export class HomePage {
       description: 'More here..'
     },
     {
-      tag: '#awake',
+      tag: 'awake',
       tagColor: 'primary',
       image: '../../assets/icon/images/concert/FRO_7401.jpg',
       viewStatus: 'static',
@@ -122,7 +122,7 @@ export class HomePage {
       description: ''
     },
     {
-      tag: '#travel',
+      tag: 'travel',
       tagColor: 'primary',
       image: '../../assets/icon/images/travel/FRO_1716.jpg',
       viewStatus: 'preview',
@@ -144,7 +144,8 @@ export class HomePage {
     }
   ];
 
-  tags = ['people', 'concert', 'recent'];
+  tags = [];
+  noColumns: number;
   columns = {left: [], middle: [], right: []};
   currentSegment = 'preview';
   slideOpts = {
@@ -162,24 +163,32 @@ export class HomePage {
         ]).subscribe(result => {
           if (result.matches) {
             this.twoColumnsFormat();
+            this.noColumns = 2;
           } else {
             this.threeColumnsFormat();
+            this.noColumns = 3;
           }
         });
+    for (let key in this.portraitPictures) {
+      const tag = this.portraitPictures[key]['tag'];
+      if (!this.tags.includes(tag)) {
+        this.tags.push(tag);
+      }
+    }
   }
 
-  twoColumnsFormat() {
-    const n = this.portraitPictures.length;
-    this.columns.left = this.portraitPictures.slice(0, n / 2);
-    this.columns.middle = this.portraitPictures.slice((n / 2), n + 1);
+  twoColumnsFormat(picturePosts = this.portraitPictures) {
+    const n = picturePosts.length;
+    this.columns.left = picturePosts.slice(0, n / 2);
+    this.columns.middle = picturePosts.slice((n / 2), n + 1);
     this.columns.right = [];
   }
 
-  threeColumnsFormat() {
-    const n = this.portraitPictures.length;
-    this.columns.left = this.portraitPictures.slice(0, n / 3);
-    this.columns.middle = this.portraitPictures.slice((n / 3), (2 * n) / 3);
-    this.columns.right = this.portraitPictures.slice(((2 * n) / 3), n + 1);
+  threeColumnsFormat(picturePosts = this.portraitPictures) {
+    const n = picturePosts.length;
+    this.columns.left = picturePosts.slice(0, n / 3);
+    this.columns.middle = picturePosts.slice((n / 3), (2 * n) / 3);
+    this.columns.right = picturePosts.slice(((2 * n) / 3), n + 1);
   }
 
   async presentAlbum(event) {
@@ -202,6 +211,38 @@ export class HomePage {
       }
     });
     await modal.present();
+  }
+
+  reducePosts(tag) {
+    console.log(tag);
+    const visiblePicturePosts = [];
+    for (const key in this.portraitPictures) {
+      const postTag = this.portraitPictures[key]['tag'];
+      if (postTag !== tag) {
+        this.portraitPictures[key]['viewStatus'] = 'hide';
+      } else {
+        visiblePicturePosts.push(this.portraitPictures[key]);
+      }
+    }
+    if (this.noColumns === 2) {
+      this.twoColumnsFormat(visiblePicturePosts);
+    } else {
+      this.threeColumnsFormat(visiblePicturePosts);
+    }
+  }
+
+  allPosts() {
+    for (const key in this.portraitPictures) {
+      const post = this.portraitPictures[key];
+      if (post['viewStatus'] === 'hide') {
+        post['viewStatus'] = 'preview';
+      }
+    }
+    if (this.noColumns === 2) {
+      this.twoColumnsFormat();
+    } else {
+      this.threeColumnsFormat();
+    }
   }
 
 }

@@ -107,8 +107,11 @@
   </ion-row>
 
   <p class="tags">
-    <ion-chip outline color="primary" *ngFor="let tag of tags" class="chip-content">
-      <ion-label>{{tag}}</ion-label>
+    <ion-chip outline color="primary" *ngFor="let tag of tags" class="chip-content" (click)="reducePosts(tag)">
+      <ion-label>#{{tag}}</ion-label>
+    </ion-chip>
+    <ion-chip outline color="primary" class="chip-content" (click)="allPosts()">
+      <ion-label>#all</ion-label>
     </ion-chip>
   </p>
 
