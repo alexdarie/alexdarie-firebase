@@ -35,3 +35,7 @@ add the TXT Record. There are two additional A records which can be faound in th
 [step_three]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-12%20at%201.22.36%20PM.png "Namecheap console, advanced dns dashboard"
 
 [step_four]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-12%20at%201.22.53%20PM.png "Namecheap console, records dashboard"
+
+### Versions
+
+`v1.0` Marks the version with a home page (without menu), 2/3 column-switch in the grid and a footer.
