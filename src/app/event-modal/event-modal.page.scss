@@ -50,9 +50,17 @@
     margin-bottom: 10px;
 }
 
+.slides {
+    width: 80%;
+}
+
 @media screen and (max-width: 767px) {
     .image-content {
         width: 100%;
         padding: 10px;
+    }
+
+    .slides {
+        width: 90%;
     }
 }

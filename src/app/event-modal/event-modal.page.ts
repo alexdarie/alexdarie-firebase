@@ -11,6 +11,11 @@ export class EventModalPage implements OnInit {
   img: any;
   event: any;
   currentSegment = 'pictures';
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    autoHeight: true
+  };
 
   constructor(
     private modalController: ModalController,

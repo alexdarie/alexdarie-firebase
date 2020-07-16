@@ -10,6 +10,17 @@
     </div>
   </div>
 
+  <div class="tags-container">
+    <p class="tags">
+      <ion-chip outline color="primary" *ngFor="let topic of tags" class="chip-content" (click)="reducePosts(topic)">
+        <ion-label>{{topic}}</ion-label>
+      </ion-chip>
+      <ion-chip outline color="primary" class="chip-content" (click)="allPosts()">
+        <ion-label>all</ion-label>
+      </ion-chip>
+    </p>
+  </div>
+
   <ion-row class="row-content">
     <ion-col class="col-content">
       <ion-card *ngFor="let event of columns.left"> 
@@ -20,7 +31,7 @@
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
@@ -51,7 +62,7 @@
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
@@ -78,11 +89,11 @@
         <ion-grid>
           <ion-row>
             <ion-col class="col-align">
-              <!-- to be added -->
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
             </ion-col>
             <ion-col class="category-button">
               <div class="category-title">
-                <ion-badge slot="end" color={{event.tagColor}}>{{event.tag}}</ion-badge>
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
               </div>
             </ion-col>
           </ion-row>
@@ -106,14 +117,108 @@
     </ion-col>
   </ion-row>
 
-  <p class="tags">
-    <ion-chip outline color="primary" *ngFor="let tag of tags" class="chip-content" (click)="reducePosts(tag)">
-      <ion-label>#{{tag}}</ion-label>
-    </ion-chip>
-    <ion-chip outline color="primary" class="chip-content" (click)="allPosts()">
-      <ion-label>#all</ion-label>
-    </ion-chip>
-  </p>
+  <div class="story">
+    <div class="story-content">
+      <h1 class="story-title">{{this.story.photography.title}}</h1>
+      <p class="story-text">{{this.story.photography.description}}</p>
+    </div>
+  </div>
+
+  <ion-row class="row-content">
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of techColumns.left"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable >
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
+        <ion-card-header>
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of techColumns.middle"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable />
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
+        <ion-card-header class="pointer">
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col class="col-content">
+      <ion-card *ngFor="let event of techColumns.right"> 
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-align">
+              <p class="no-images-preview" *ngIf="event.viewStatus === 'preview'">{{event.postImages.length}} images</p>
+            </ion-col>
+            <ion-col class="category-button">
+              <div class="category-title">
+                <ion-badge slot="end" color={{event.tagColor}}>#{{event.tag}}</ion-badge>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
+          <ion-slide *ngFor="let image of event.previewImages">
+            <img src={{image}} tappable />
+          </ion-slide>
+        </ion-slides>
+        <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
+        <ion-card-header class="pointer">
+          <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.description.substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 
   <ion-footer class="bottom">
     <ion-grid>
@@ -122,9 +227,9 @@
           <p class="title bottom-font">© alexdarie 2020</p>
         </ion-col>
         <ion-col>
-          <p class="contact bottom-font">Coded with love, Ionic and Firebase.<br><br>
+          <p class="contact bottom-font bottom-align">Coded with love, Ionic and Firebase.<br><br>
           <p class="contact bottom-font bottom-align">The fastest (and most reliable) way to reach me is on Messenger: </p>
-          <p><a class="contact bottom-font link" href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
+          <p><a class="contact bottom-font link bottom-align" href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
         </ion-col>
         <ion-col class="contact-last-col"></ion-col>
       </ion-row>

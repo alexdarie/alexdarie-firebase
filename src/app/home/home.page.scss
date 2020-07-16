@@ -48,12 +48,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin: 10px 10vw 0 10vw;
+    margin: 12px 12vw 0 12vw;
   }
 
   .category-title {
     display: flex;
     justify-content: flex-start;
+  }
+
+  .story-content {
+    margin-top: 35px;
+    width: 80%;
+  }
+
+  .story-title {
+    color: #1e66e1;
+    margin-bottom: 10px;
+  }
+
+  .story-content {
+    width: 50%;
+  }
+
+  .story-text {
+    text-align: left;
+    font-family: sans-serif; 
+    font-size: 22px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 250; 
+    line-height: 35px; 
+  }
+
+  .story {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    margin: 25px 0 0 0;
+    background-color: #ebeae8;
   }
 
   .col-align {
@@ -87,7 +119,7 @@
   }
 
   .header {
-    padding: 20px 0 0 0;
+    padding: 0;
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
@@ -102,9 +134,9 @@
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     text-align: left;
-    width: 40%;
+    width: 60%;
     max-width: 800px;
-    margin: 15px 0 0 5%;
+    margin: 0 0 0 5%;
     padding: 15px;
     border-radius: 5px;
     background-color: rgba(235,234,232,0.2);
@@ -182,7 +214,7 @@
       text-align: left;
       width: 40%;
       max-width: 800px;
-      margin: 15px 0 0 5%;
+      margin: 0 0 0 5%;
       padding: 15px;
       border-radius: 5px;
       background-color: rgba(235,234,232,0.2);
@@ -193,9 +225,15 @@
     }
   }
 
+
+  @media screen and (max-width: 1700px) {
+    .story-content {
+      width: 80%;
+    }
+  }
+
   @media screen and (max-width: 1400px) {
     .bio {
-      margin-left: 15px;
       margin: 0 0 0 3%;
       width: 50%;
     }
@@ -207,11 +245,20 @@
     }
 
     .bio {
-      margin-left: 15px;
       font-size: 20px;
       line-height: 22px;
       margin: 0 0 0 3%;
       width: 50%;
+    }
+
+    .story-text {
+      text-align: left;
+      font-family: sans-serif; 
+      font-size: 19px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 250; 
+      line-height: 32px; 
     }
   }
 
@@ -248,11 +295,20 @@
     }
 
     .bio {
-      margin-left: 15px;
       font-size: 15px;
       line-height: 20px;
       margin: 0 0 0 3%;
       width: 70%;
+    }
+
+    .story-text {
+      text-align: left;
+      font-family: sans-serif; 
+      font-size: 17px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 250; 
+      line-height: 30px; 
     }
   }
 
@@ -264,7 +320,6 @@
     }
 
     .bio {
-      margin-left: 0;
       width: 80%;
     }
 
@@ -277,20 +332,45 @@
     }
 
     .bio {
-      margin-left: 15px;
       font-size: 13px;
       line-height: 19px;
       margin: 0 0 0 3%;
     }
+
+    .title {
+      margin-left: -10vw;
+    }
+
+    .story-text {
+      text-align: left;
+      font-family: sans-serif; 
+      font-size: 15px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 250; 
+      line-height: 27px; 
+    }
   }
 
   @media screen and (max-width: 400px) {
-
     .bio {
-      margin-left: 15px;
       font-size: 12px;
       line-height: 18px;
       margin: 0 0 0 3%;
+    }
+
+    .story-text {
+      text-align: left;
+      font-family: sans-serif; 
+      font-size: 14px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 200; 
+      line-height: 25px; 
+    }
+
+    .story-content {
+      width: 90%;
     }
   }
 
@@ -302,7 +382,6 @@
     }
 
     .bio {
-      margin-left: 0;
       width: 80%;
     }
 
@@ -315,7 +394,6 @@
     }
 
     .bio {
-      margin-left: 15px;
       font-size: 12px;
       line-height: 18px;
       margin: 0 0 0 3%;
@@ -330,7 +408,6 @@
     }
 
     .bio {
-      margin-left: 0;
       width: 80%;
     }
 
@@ -343,11 +420,10 @@
     }
 
     .bio {
-      margin-left: 15px;
       font-size: 10px;
       line-height: 15px;
       width: 85%;
-      margin: -15px 0 0 3%;
+      margin: 0 0 0 3%;
     }
   }
 }

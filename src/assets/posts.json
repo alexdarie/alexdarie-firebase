@@ -1,7 +1,8 @@
 {
-    "portraitPictures": [
+    "photographyPosts": [
         {
           "tag": "ec",
+          "topic": "photography",
           "tagColor": "secondary",
           "image": "../../assets/icon/images/concert/FRO_1186.jpg",
           "viewStatus": "preview",
@@ -26,6 +27,7 @@
         },
         {
           "tag": "people",
+          "topic": "photography",
           "tagColor": "secondary",
           "image": "../../assets/icon/images/concert/FRO_1363.jpg",
           "viewStatus": "preview",
@@ -45,6 +47,7 @@
         },
         {
           "tag": "people",
+          "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/concert/FRO_3780.jpg",
           "viewStatus": "preview",
@@ -63,6 +66,7 @@
         },
         {
           "tag": "people",
+          "topic": "photography",
           "tagColor": "secondary",
           "image": "../../assets/icon/images/concert/FRO_0637.jpg",
           "viewStatus": "preview",
@@ -85,6 +89,7 @@
         },
         {
           "tag": "summerwell",
+          "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/concert/FRO_6676.jpg",
           "viewStatus": "static",
@@ -97,6 +102,7 @@
         },
         {
           "tag": "awake",
+          "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/concert/FRO_7401.jpg",
           "viewStatus": "static",
@@ -115,6 +121,7 @@
         },
         {
           "tag": "travel",
+          "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/travel/FRO_1716.jpg",
           "viewStatus": "preview",
@@ -141,5 +148,34 @@
         "speed": 400,
         "autoHeight": true,
         "pager": true
-    }
+    },
+    "story": {
+      "photography": {
+        "title": "Concert photography & Tech",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      },
+      "tech": {
+        "title": "Tech",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      }
+    },
+    "techPosts": [
+      {
+        "tag": "cloud",
+        "topic": "tech",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/concert/FRO_2878.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/concert/FRO_2878.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/concert/FRO_2878.jpg"
+        ],
+        "date": "Jul 2020",
+        "title": "Chappie",
+        "description": ""
+      }
+    ]
 }
