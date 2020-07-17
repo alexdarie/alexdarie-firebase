@@ -44,6 +44,14 @@
     margin: 10px 10vw 0 10vw;
   }
 
+  .tags-container {
+    margin-top: -30vh;
+  }
+
+  .small-tags {
+    padding: 18px;
+  }
+
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +89,11 @@
   }
 
   .story {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/b2.gif");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 32px;
@@ -104,14 +117,24 @@
   }
 
   .logo {
-    margin: 20px auto 0 6%;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    margin: -15px auto 0 0;
+    height: 70px;
+    z-index: 30;
+  }
+
+  .site-title {
+    margin: 2vh 0 0 11vw;
+    font-weight: 350;
+  }
+
+  .toolbar-buttons {
+    margin: 2vh 11vw 0 0;
   }
 
   .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/icon/images/concert/FRO_2529.jpg");
-    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/b1.gif");
+    height: 50vh;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,6 +260,10 @@
       margin: 0 0 0 3%;
       width: 50%;
     }
+
+    .tags-container {
+      margin-top: -40vh;
+    }
   }
 
   @media screen and (max-width: 1200px) {
@@ -260,13 +287,22 @@
       font-weight: 250; 
       line-height: 32px; 
     }
+
+    .row-content {
+      margin-top: -5px;
+    }
+
+    .logo {
+      width: 70px;
+      margin: -15px auto 0 0;
+      height: 70px;
+      z-index: 30;
+    }
   }
 
   @media screen and (max-width: 800px) {
     .logo {
-      margin: 10px auto 0 6%;
-      width: 70px;
-      height: 70px;
+      display: none;
     }
 
     .row-content {
@@ -310,13 +346,23 @@
       font-weight: 250; 
       line-height: 30px; 
     }
+
+    .tags-container {
+      margin-top: -25vh;
+    }
+
+    .row-content {
+      margin-top: -9px;
+      margin: 10px 7vw 0 7vw;
+    }
   }
 
   @media screen and (max-width: 600px) {
     .logo {
-      margin: 10px auto 0 6%;
       width: 70px;
+      margin: -15px auto 0 0;
       height: 70px;
+      z-index: 30;
     }
 
     .bio {
@@ -350,6 +396,7 @@
       font-weight: 250; 
       line-height: 27px; 
     }
+
   }
 
   @media screen and (max-width: 400px) {
@@ -372,13 +419,18 @@
     .story-content {
       width: 90%;
     }
+
+    .tags-container {
+      margin-top: -15vh;
+    }
   }
 
   @media screen and (max-width: 360px) {
     .logo {
-      margin: 10px auto 0 6%;
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      margin: -15px auto 0 0;
+      height: 70px;
+      z-index: 30;
     }
 
     .bio {

@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage implements OnInit {
 
+  spaceEnoughForTags: boolean;
   photographyPosts = [];
   techPosts = [];
   story = {
@@ -54,6 +55,13 @@ export class HomePage implements OnInit {
               this.noColumns = 3;
             }
           });
+      this.breakpointObserver.observe(['(max-width: 1200px)']).subscribe(result => {
+        if (result.matches) {
+          this.spaceEnoughForTags = false;
+        } else {
+          this.spaceEnoughForTags = true;
+        }
+      });
     },
     (err) => {
       alert('failed loading json data');
@@ -118,19 +126,23 @@ export class HomePage implements OnInit {
     /* Selecting a tag, the user reduces the number of posts, while the list of pictures
     is updating the boolean value of its elements' 'hide' attribute. */
 
-    const visiblePicturePosts = [];
-    for (const post of this.photographyPosts) {
-      const postTag = post.tag;
-      if (postTag !== tag) {
-        post.hide = true;
-      } else {
-        visiblePicturePosts.push(post);
-      }
-    }
-    if (this.noColumns === 2) {
-      this.twoColumnsFormat(visiblePicturePosts);
+    if (tag === 'all') {
+      this.allPosts();
     } else {
-      this.threeColumnsFormat(visiblePicturePosts);
+      const visiblePicturePosts = [];
+      for (const post of this.photographyPosts) {
+        const postTag = post.tag;
+        if (postTag !== tag) {
+          post.hide = true;
+        } else {
+          visiblePicturePosts.push(post);
+        }
+      }
+      if (this.noColumns === 2) {
+        this.twoColumnsFormat(visiblePicturePosts);
+      } else {
+        this.threeColumnsFormat(visiblePicturePosts);
+      }
     }
   }
 

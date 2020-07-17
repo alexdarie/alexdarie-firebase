@@ -19,10 +19,30 @@
             "../../assets/icon/images/concert/FRO_1091.jpg",
             "../../assets/icon/images/concert/FRO_1225.jpg",
             "../../assets/icon/images/concert/FRO_1121.jpg",
-            "../../assets/icon/images/concert/FRO_1186.jpg"
+            "../../assets/icon/images/concert/FRO_1186.jpg",
+            "../../assets/icon/images/concert/FRO_3896.jpg",
+            "../../assets/icon/images/concert/FRO_3874.jpg",
+            "../../assets/icon/images/concert/FRO_3658.jpg",
+            "../../assets/icon/images/concert/FRO_3557.jpg",
+            "../../assets/icon/images/concert/FRO_3521.jpg",
+            "../../assets/icon/images/concert/FRO_3197.jpg",
+            "../../assets/icon/images/concert/FRO_2876.jpg",
+            "../../assets/icon/images/concert/FRO_2594.jpg",
+            "../../assets/icon/images/concert/FRO_2529.jpg",
+            "../../assets/icon/images/concert/FRO_2362.jpg",
+            "../../assets/icon/images/concert/FRO_2359.jpg",
+            "../../assets/icon/images/concert/FRO_2075.jpg",
+            "../../assets/icon/images/concert/FRO_1953.jpg",
+            "../../assets/icon/images/concert/FRO_1927.jpg",
+            "../../assets/icon/images/concert/FRO_1797.jpg",
+            "../../assets/icon/images/concert/FRO_1702.jpg",
+            "../../assets/icon/images/concert/FRO_1004.jpg",
+            "../../assets/icon/images/concert/FRO_0840.jpg",
+            "../../assets/icon/images/concert/FRO_0758.jpg",
+            "../../assets/icon/images/concert/FRO_0682.jpg"
             ],
           "date": "May 2019",
-          "title": "Courtyard",
+          "title": "Electric Castle 7",
           "description": "Arguably, every time there something new when you go to a large festival, yet the interaction with those organizing it remains pretty much unchanged. If there is one thing I will remember from the 7th edition of Electric Castle is that you should always let the backstage crew know that you are walking around. Even though you have the right to be everywhere, you should still tell them know your intentions. Besides, they might even be kind enough to guide you and let you know when something important will happen."
         },
         {
@@ -42,7 +62,7 @@
             "../../assets/icon/images/concert/FRO_1497.jpg"
           ],
           "date": "Jul 2019",
-          "title": "Hidden Alley",
+          "title": "Hidden alleys, lots of portraits",
           "description": ""
         },
         {
@@ -61,7 +81,7 @@
             "../../assets/icon/images/concert/FRO_1338.jpg"
           ],
           "date": "May 2019",
-          "title": "Festival people",
+          "title": "Festivals around the country",
           "description": ""
         },
         {
@@ -88,35 +108,58 @@
           "description": "More here.."
         },
         {
-          "tag": "summerwell",
-          "topic": "photography",
-          "tagColor": "primary",
-          "image": "../../assets/icon/images/concert/FRO_6676.jpg",
-          "viewStatus": "static",
-          "hide": false,
-          "previewImages": ["../../assets/icon/images/concert/FRO_6676.jpg"],
-          "postImages": ["../../assets/icon/images/concert/FRO_6676.jpg"],
-          "date": "Oct 2018",
-          "title": "Sofi Tukker",
-          "description": "More here.."
-        },
-        {
           "tag": "awake",
           "topic": "photography",
           "tagColor": "primary",
-          "image": "../../assets/icon/images/concert/FRO_7401.jpg",
-          "viewStatus": "static",
+          "image": "../../assets/icon/images/concert/FRO_6575.jpg",
+          "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_7401.jpg",
-            "../../assets/icon/images/concert/FRO_8045.jpg"
+            "../../assets/icon/images/concert/FRO_6575.jpg",
+            "../../assets/icon/images/concert/FRO_7205.jpg",
+            "../../assets/icon/images/concert/FRO_7219.jpg"],
+          "postImages": ["../../assets/icon/images/concert/FRO_6575.jpg",
+            "../../assets/icon/images/concert/FRO_6608.jpg",
+            "../../assets/icon/images/concert/FRO_6737.jpg",
+            "../../assets/icon/images/concert/FRO_6912.jpg",
+            "../../assets/icon/images/concert/FRO_7000.jpg",
+            "../../assets/icon/images/concert/FRO_7046.jpg",
+            "../../assets/icon/images/concert/FRO_7205.jpg",
+            "../../assets/icon/images/concert/FRO_7219.jpg",
+            "../../assets/icon/images/concert/FRO_7222.jpg",
+            "../../assets/icon/images/concert/FRO_7228.jpg",
+            "../../assets/icon/images/concert/FRO_7237.jpg",
+            "../../assets/icon/images/concert/FRO_7474.jpg"
+          ],
+          "date": "Oct 2018",
+          "title": "Awake",
+          "description": "More here.."
+        },
+        {
+          "tag": "jazz",
+          "topic": "photography",
+          "tagColor": "primary",
+          "image": "../../assets/icon/images/concert/FRO_6142.jpg",
+          "viewStatus": "preview",
+          "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/concert/FRO_6142.jpg",
+            "../../assets/icon/images/concert/FOO_2842.jpg",
+            "../../assets/icon/images/concert/FOO_2886.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/concert/FRO_7401.jpg",
-            "../../assets/icon/images/concert/FRO_8045.jpg"
+            "../../assets/icon/images/concert/FRO_6142.jpg",
+            "../../assets/icon/images/concert/DSC_6109.jpg",
+            "../../assets/icon/images/concert/DSC_6114.jpg",
+            "../../assets/icon/images/concert/DSC_6131.jpg",
+            "../../assets/icon/images/concert/FOO_2733.jpg",
+            "../../assets/icon/images/concert/FOO_2842.jpg",
+            "../../assets/icon/images/concert/FOO_2886.jpg",
+            "../../assets/icon/images/concert/FOO_3205.jpg",
+            "../../assets/icon/images/concert/FOO_3301.jpg"
           ],
           "date": "Oct 2019",
-          "title": "Awake",
+          "title": "Jazz in the Park",
           "description": ""
         },
         {
@@ -152,11 +195,11 @@
     "story": {
       "photography": {
         "title": "Concert photography & Tech",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
       },
       "tech": {
         "title": "Tech",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
       }
     },
     "techPosts": [
@@ -174,7 +217,7 @@
           "../../assets/icon/images/concert/FRO_2878.jpg"
         ],
         "date": "Jul 2020",
-        "title": "Chappie",
+        "title": "Chappie, my bachelor thesis",
         "description": ""
       }
     ]

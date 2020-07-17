@@ -1,12 +1,16 @@
 <ion-content fullscreen style="margin-top: 10px">
   
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="dismiss()" class="fab-btn">
-      <ion-icon name="close" class="icon"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-toolbar>
+    <ion-text color="secondary">
+    </ion-text>
+    <ion-buttons slot="end" class="toolbar-buttons">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" ios="close" md="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 
-  <ion-col class="col-content">
+  <ion-col class="col-content jump-top">
     <div class="story-content">
       <h1 class="event-title">{{this.event.title}}</h1>
       <h3>{{this.event.date}}</h3>

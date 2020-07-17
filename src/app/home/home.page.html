@@ -1,22 +1,41 @@
 <ion-content [fullscreen]="true">
   <div class="hero-image">
     <ion-toolbar>
-      <img class="logo" src="../../assets/icon/images/sigla.png">
+      <ion-text color="secondary">
+        <h1 class="site-title">Alex on Tech.</h1>
+      </ion-text>
+      <ion-buttons slot="end" class="toolbar-buttons">
+        <ion-button href="https://www.messenger.com/t/alexandru.darie.1">
+          <ion-icon slot="icon-only" ios="logo-instagram" md="logo-instagram"></ion-icon>
+        </ion-button>
+        <ion-button href="https://www.github.com/alexdarie">
+          <ion-icon slot="icon-only" ios="logo-github" md="logo-github"></ion-icon>
+        </ion-button>
+        <ion-button href="https://www.messenger.com/t/alexandru.darie.1">
+          <ion-icon slot="icon-only" ios="logo-facebook" md="logo-facebook"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
-
-    <div class="header">
-      <h1 class="bio">Hi there! My name is Alex, and I am a computer science graduate, grown in the 
-        dot-com bubble with a contagious curiosity for photography and tech.</h1>
-    </div>
   </div>
 
   <div class="tags-container">
-    <p class="tags">
+    <p class="tags" *ngIf="spaceEnoughForTags">
+      <img class="logo" src="../../assets/icon/images/sigla.png">
       <ion-chip outline color="primary" *ngFor="let topic of tags" class="chip-content" (click)="reducePosts(topic)">
         <ion-label>{{topic}}</ion-label>
       </ion-chip>
       <ion-chip outline color="primary" class="chip-content" (click)="allPosts()">
         <ion-label>all</ion-label>
+      </ion-chip>
+    </p>
+    <p class="tags" *ngIf="!spaceEnoughForTags">
+      <img class="logo" src="../../assets/icon/images/sigla.png">
+      <ion-chip outline color="primary" class="small-tags">
+        <ion-label style="min-width: 100px;">Tags</ion-label>
+        <ion-select interface="popover" #C (ionChange)="reducePosts(C.value)">
+          <ion-select-option [value]="topic" *ngFor="let topic of tags">{{topic}}</ion-select-option>
+          <ion-select-option value="all">all</ion-select-option>
+        </ion-select>
       </ion-chip>
     </p>
   </div>
@@ -227,7 +246,7 @@
           <p class="title bottom-font">© alexdarie 2020</p>
         </ion-col>
         <ion-col>
-          <p class="contact bottom-font bottom-align">Coded with love, Ionic and Firebase.<br><br>
+          <p class="contact bottom-font bottom-align">Coded with Ionic and Firebase.<br><br>
           <p class="contact bottom-font bottom-align">The fastest (and most reliable) way to reach me is on Messenger: </p>
           <p><a class="contact bottom-font link bottom-align" href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
         </ion-col>

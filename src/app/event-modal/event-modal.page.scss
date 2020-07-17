@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.jump-top {
+    margin-top: -35px;
+}
+
 .story-content {
     margin-top: 35px;
     width: 80%;
@@ -48,6 +52,15 @@
 .event-title {
     color: #1e66e1;
     margin-bottom: 10px;
+}
+
+.site-title {
+    margin: 2vh 0 0 13%;
+    font-weight: 350;
+}
+
+.toolbar-buttons {
+    margin: 2vh 10% 0 0;
 }
 
 .slides {
