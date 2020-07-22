@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'event-modal',
     loadChildren: () => import('./event-modal/event-modal.module').then( m => m.EventModalPageModule)
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'home-menu',
+    loadChildren: () => import('./home-menu/home-menu.module').then( m => m.HomeMenuPageModule)
+  },
 ];
 
 @NgModule({

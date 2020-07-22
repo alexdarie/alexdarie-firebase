@@ -42,11 +42,11 @@
             "../../assets/icon/images/concert/FRO_0682.jpg"
             ],
           "date": "May 2019",
-          "title": "Electric Castle 7",
+          "title": "Electric Castle 19'",
           "description": "Arguably, every time there something new when you go to a large festival, yet the interaction with those organizing it remains pretty much unchanged. If there is one thing I will remember from the 7th edition of Electric Castle is that you should always let the backstage crew know that you are walking around. Even though you have the right to be everywhere, you should still tell them know your intentions. Besides, they might even be kind enough to guide you and let you know when something important will happen."
         },
         {
-          "tag": "people",
+          "tag": "portrait",
           "topic": "photography",
           "tagColor": "secondary",
           "image": "../../assets/icon/images/concert/FRO_1363.jpg",
@@ -62,26 +62,38 @@
             "../../assets/icon/images/concert/FRO_1497.jpg"
           ],
           "date": "Jul 2019",
-          "title": "Hidden alleys, lots of portraits",
+          "title": "Portraits",
           "description": ""
         },
         {
-          "tag": "people",
+          "tag": "awake",
           "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/concert/FRO_3780.jpg",
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_3780.jpg",
+            "../../assets/icon/images/concert/FRO_7228.jpg",
             "../../assets/icon/images/concert/FRO_1338.jpg"
           ],
           "postImages": [
+            "../../assets/icon/images/concert/FRO_7228.jpg",
+            "../../assets/icon/images/concert/FRO_7237.jpg",
             "../../assets/icon/images/concert/FRO_3780.jpg",
-            "../../assets/icon/images/concert/FRO_1338.jpg"
+            "../../assets/icon/images/concert/FRO_1338.jpg",
+            "../../assets/icon/images/concert/FRO_6575.jpg",
+            "../../assets/icon/images/concert/FRO_6608.jpg",
+            "../../assets/icon/images/concert/FRO_6737.jpg",
+            "../../assets/icon/images/concert/FRO_6912.jpg",
+            "../../assets/icon/images/concert/FRO_7000.jpg",
+            "../../assets/icon/images/concert/FRO_7046.jpg",
+            "../../assets/icon/images/concert/FRO_7205.jpg",
+            "../../assets/icon/images/concert/FRO_7219.jpg",
+            "../../assets/icon/images/concert/FRO_7222.jpg",
+            "../../assets/icon/images/concert/FRO_7474.jpg"
           ],
           "date": "May 2019",
-          "title": "Festivals around the country",
+          "title": "Awake 19'",
           "description": ""
         },
         {
@@ -108,35 +120,7 @@
           "description": "More here.."
         },
         {
-          "tag": "awake",
-          "topic": "photography",
-          "tagColor": "primary",
-          "image": "../../assets/icon/images/concert/FRO_6575.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/concert/FRO_6575.jpg",
-            "../../assets/icon/images/concert/FRO_7205.jpg",
-            "../../assets/icon/images/concert/FRO_7219.jpg"],
-          "postImages": ["../../assets/icon/images/concert/FRO_6575.jpg",
-            "../../assets/icon/images/concert/FRO_6608.jpg",
-            "../../assets/icon/images/concert/FRO_6737.jpg",
-            "../../assets/icon/images/concert/FRO_6912.jpg",
-            "../../assets/icon/images/concert/FRO_7000.jpg",
-            "../../assets/icon/images/concert/FRO_7046.jpg",
-            "../../assets/icon/images/concert/FRO_7205.jpg",
-            "../../assets/icon/images/concert/FRO_7219.jpg",
-            "../../assets/icon/images/concert/FRO_7222.jpg",
-            "../../assets/icon/images/concert/FRO_7228.jpg",
-            "../../assets/icon/images/concert/FRO_7237.jpg",
-            "../../assets/icon/images/concert/FRO_7474.jpg"
-          ],
-          "date": "Oct 2018",
-          "title": "Awake",
-          "description": "More here.."
-        },
-        {
-          "tag": "jazz",
+          "tag": "sw",
           "topic": "photography",
           "tagColor": "primary",
           "image": "../../assets/icon/images/concert/FRO_6142.jpg",
@@ -158,8 +142,8 @@
             "../../assets/icon/images/concert/FOO_3205.jpg",
             "../../assets/icon/images/concert/FOO_3301.jpg"
           ],
-          "date": "Oct 2019",
-          "title": "Jazz in the Park",
+          "date": "Oct 2018",
+          "title": "Summerwell 19'",
           "description": ""
         },
         {
@@ -170,9 +154,8 @@
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/travel/FRO_9694.jpg",
             "../../assets/icon/images/travel/FRO_0514.jpg",
-            "../../assets/icon/images/travel/FRO_1737.jpg"
+            "../../assets/icon/images/travel/FRO_1716.jpg"
           ],
           "postImages": [
             "../../assets/icon/images/travel/FRO_1722.jpg",
@@ -195,11 +178,7 @@
     "story": {
       "photography": {
         "title": "Concert photography & Tech",
-        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-      },
-      "tech": {
-        "title": "Tech",
-        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
       }
     },
     "techPosts": [
@@ -219,6 +198,25 @@
         "date": "Jul 2020",
         "title": "Chappie, my bachelor thesis",
         "description": ""
+      }
+    ],
+    "aboutMePosts": [
+      {
+        "tag": "me",
+        "topic": "about",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/FRO_3347.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/FRO_3347.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/FRO_3347.jpg"
+        ],
+        "date": "Jul 2020",
+        "title": "Hi there!",
+        "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
       }
     ]
 }

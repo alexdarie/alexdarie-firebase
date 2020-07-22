@@ -44,71 +44,19 @@
     margin: 10px 10vw 0 10vw;
   }
 
-  .tags-container {
-    margin-top: -30vh;
-  }
-
-  .small-tags {
-    padding: 18px;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin: 12px 12vw 0 12vw;
+  .row-content-about {
+    margin: 10px 10vw 0 10vw;
   }
 
   .category-title {
     display: flex;
-    justify-content: flex-start;
-  }
-
-  .story-content {
-    margin-top: 35px;
-    width: 80%;
-  }
-
-  .story-title {
-    color: #1e66e1;
-    margin-bottom: 10px;
-  }
-
-  .story-content {
-    width: 50%;
-  }
-
-  .story-text {
-    text-align: left;
-    font-family: sans-serif; 
-    font-size: 22px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 250; 
-    line-height: 35px; 
-  }
-
-  .story {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/b2.gif");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 32px;
-    margin: 25px 0 0 0;
-    background-color: #ebeae8;
+    justify-content: flex-end;
+    margin: -30px 0 0 0;
   }
 
   .col-align {
     display: flex;
     align-items: center;
-  }
-
-  .strong-font {
-    font-family: sans-serif;
-    font-size: 17px;
   }
 
   .category-button {
@@ -126,14 +74,19 @@
   .site-title {
     margin: 2vh 0 0 11vw;
     font-weight: 350;
+    color: white;
   }
 
   .toolbar-buttons {
     margin: 2vh 11vw 0 0;
   }
 
+  .white-icons {
+    color: white;
+  }
+
   .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/b1.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/2985463.jpg");
     height: 50vh;
     background-position: top center;
     background-repeat: no-repeat;
@@ -141,37 +94,49 @@
     position: relative;
   }
 
-  .header {
-    padding: 0;
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    color: white;
-  }
-
-  .bio {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    text-align: left;
-    width: 60%;
-    max-width: 800px;
-    margin: 0 0 0 5%;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: rgba(235,234,232,0.2);
-    position: relative;
-    font-size: 24px;
-    font-weight: 350;
-    line-height: 33px;
-  } 
-
   .col-content {
     width: 30%;
     min-width: 500px;
+  }
+
+  .col-content-about {
+    max-width: 25%;
+  }
+
+  .about-story {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    max-width: 20vw;
+    margin-top: -15px;
+    padding: 35px 10px;
+  }
+
+
+  .about {
+    margin-top: 70px;
+    padding: 30px 0 30px 0;
+    // background-color: #ebeae8;
+    background-image: linear-gradient(rgba(255, 255, 255, 1.0), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/3000591.jpg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .circular--landscape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20vw;
+    height: auto;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .circular--landscape img {
+    width: auto;
+    z-index: 10;
   }
 
   .bottom-font {
@@ -227,28 +192,31 @@
     justify-content: flex-end;
   }
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 1900px) {
-    .bio {
-      display: -ms-flexbox; /* IE10 */
-      display: flex;
-      -ms-flex-wrap: wrap; /* IE10 */
-      flex-wrap: wrap;
-      text-align: left;
-      width: 40%;
-      max-width: 800px;
-      margin: 0 0 0 5%;
-      padding: 15px;
-      border-radius: 5px;
-      background-color: rgba(235,234,232,0.2);
-      position: relative;
-      font-size: 24px;
-      font-weight: 350;
-      line-height: 33px;
-    }
+  .posts {
+    display:flex;
+    justify-content: center;
+    margin-top: -40vh;
+    margin-left: 11vw;
+    margin-right: 11vw;
   }
 
+  .posts-btn {
+    margin-right: auto;
+    --border-radius: 25px;
+    --color: white;
+    --border-color: white;
+    --color-activated: white;
+    --color-focused: white;
+    --color-hover: white;
+    --ripple-color: white;
+  }
 
+  .chip-content {
+    --color: white;
+    border-color: white;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of three columns */
   @media screen and (max-width: 1700px) {
     .story-content {
       width: 80%;
@@ -256,11 +224,6 @@
   }
 
   @media screen and (max-width: 1400px) {
-    .bio {
-      margin: 0 0 0 3%;
-      width: 50%;
-    }
-
     .tags-container {
       margin-top: -40vh;
     }
@@ -271,32 +234,21 @@
       display: none;
     }
 
-    .bio {
-      font-size: 20px;
-      line-height: 22px;
-      margin: 0 0 0 3%;
-      width: 50%;
-    }
-
-    .story-text {
-      text-align: left;
-      font-family: sans-serif; 
-      font-size: 19px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 250; 
-      line-height: 32px; 
-    }
-
     .row-content {
       margin-top: -5px;
     }
 
-    .logo {
-      width: 70px;
-      margin: -15px auto 0 0;
-      height: 70px;
-      z-index: 30;
+    .col-content-about {
+      min-width: 300px;
+    }
+
+    .circular--landscape {
+      width: 300px;
+      height: 300px;
+    }
+
+    .about-story {
+      max-width: 300px;
     }
   }
 
@@ -317,10 +269,6 @@
       font-size: 15px;
     }
 
-    .hero-image {
-      height: 35%;
-    }
-
     .contact {
       display: -ms-flexbox; /* IE10 */
       display: flex;
@@ -330,91 +278,39 @@
       margin-left: 0;
     }
 
-    .bio {
-      font-size: 15px;
-      line-height: 20px;
-      margin: 0 0 0 3%;
-      width: 70%;
-    }
-
-    .story-text {
-      text-align: left;
-      font-family: sans-serif; 
-      font-size: 17px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 250; 
-      line-height: 30px; 
-    }
-
     .tags-container {
       margin-top: -25vh;
     }
 
     .row-content {
       margin-top: -9px;
-      margin: 10px 7vw 0 7vw;
+      margin: 10px 2vw 0 2vw;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .posts-btn {
+      margin: auto 0 auto 0;
     }
   }
 
   @media screen and (max-width: 600px) {
-    .logo {
-      width: 70px;
-      margin: -15px auto 0 0;
-      height: 70px;
-      z-index: 30;
-    }
-
-    .bio {
-      width: 80%;
-    }
-
     .col-content {
       min-width: 100%;
-    }
-
-    .hero-image {
-      height: 35%;
-    }
-
-    .bio {
-      font-size: 13px;
-      line-height: 19px;
-      margin: 0 0 0 3%;
     }
 
     .title {
       margin-left: -10vw;
     }
 
-    .story-text {
-      text-align: left;
-      font-family: sans-serif; 
-      font-size: 15px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 250; 
-      line-height: 27px; 
+    .categories {
+      margin: 0 11vw 0 0;
+      width: 70vw;
+      justify-content: center;
     }
-
   }
 
   @media screen and (max-width: 400px) {
-    .bio {
-      font-size: 12px;
-      line-height: 18px;
-      margin: 0 0 0 3%;
-    }
-
-    .story-text {
-      text-align: left;
-      font-family: sans-serif; 
-      font-size: 14px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 200; 
-      line-height: 25px; 
-    }
 
     .story-content {
       width: 90%;
@@ -423,32 +319,31 @@
     .tags-container {
       margin-top: -15vh;
     }
+  
+    .posts {
+      margin-top: -37vh;
+    }
+
+    .site-title {
+      font-size: 20px;
+      margin: 2vh 0 0 7vw;
+    }
+
+    .toolbar-buttons {
+      margin: 2vh 5vw 0 0;
+    }
   }
 
   @media screen and (max-width: 360px) {
     .logo {
-      width: 70px;
+      width: 50px;
       margin: -15px auto 0 0;
       height: 70px;
       z-index: 30;
     }
 
-    .bio {
-      width: 80%;
-    }
-
     .col-content {
       min-width: 100%;
-    }
-
-    .hero-image {
-      height: 30%;
-    }
-
-    .bio {
-      font-size: 12px;
-      line-height: 18px;
-      margin: 0 0 0 3%;
     }
   }
 
@@ -459,23 +354,8 @@
       height: 50px;
     }
 
-    .bio {
-      width: 80%;
-    }
-
     .col-content {
       min-width: 100%;
-    }
-
-    .hero-image {
-      height: 30%;
-    }
-
-    .bio {
-      font-size: 10px;
-      line-height: 15px;
-      width: 85%;
-      margin: 0 0 0 3%;
     }
   }
 }
