@@ -1,45 +1,61 @@
 {
     "photographyPosts": [
         {
+          "tag": "portrait", "tagColor": "secondary", "topic": "photography",
+          "image": "../../assets/icon/images/people/georgiana-apopei/FRO_0083.jpg",
+          "viewStatus": "preview", "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0083.jpg",
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0397.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0083.jpg",
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0180.jpg",
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0329.jpg",
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0397.jpg"
+          ],
+          "date": "Jul 2019",
+          "title": "Portraits (part 3)",
+          "description": ""
+        },
+        {
           "tag": "ec",
           "topic": "photography",
           "tagColor": "secondary",
-          "image": "../../assets/icon/images/concert/FRO_1186.jpg",
+          "image": "../../assets/icon/images/concert/ec19/FRO_3874.jpg",
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_0917.jpg",
-            "../../assets/icon/images/concert/FRO_1091.jpg",
-            "../../assets/icon/images/concert/FRO_1186.jpg"
+            "../../assets/icon/images/concert/ec19/FRO_3874.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1091.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1186.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/concert/FRO_0917.jpg",
-            "../../assets/icon/images/concert/FRO_0976.jpg",
-            "../../assets/icon/images/concert/FRO_1052.jpg",
-            "../../assets/icon/images/concert/FRO_1091.jpg",
-            "../../assets/icon/images/concert/FRO_1225.jpg",
-            "../../assets/icon/images/concert/FRO_1121.jpg",
-            "../../assets/icon/images/concert/FRO_1186.jpg",
-            "../../assets/icon/images/concert/FRO_3896.jpg",
-            "../../assets/icon/images/concert/FRO_3874.jpg",
-            "../../assets/icon/images/concert/FRO_3658.jpg",
-            "../../assets/icon/images/concert/FRO_3557.jpg",
-            "../../assets/icon/images/concert/FRO_3521.jpg",
-            "../../assets/icon/images/concert/FRO_3197.jpg",
-            "../../assets/icon/images/concert/FRO_2876.jpg",
-            "../../assets/icon/images/concert/FRO_2594.jpg",
-            "../../assets/icon/images/concert/FRO_2529.jpg",
-            "../../assets/icon/images/concert/FRO_2362.jpg",
-            "../../assets/icon/images/concert/FRO_2359.jpg",
-            "../../assets/icon/images/concert/FRO_2075.jpg",
-            "../../assets/icon/images/concert/FRO_1953.jpg",
-            "../../assets/icon/images/concert/FRO_1927.jpg",
-            "../../assets/icon/images/concert/FRO_1797.jpg",
-            "../../assets/icon/images/concert/FRO_1702.jpg",
-            "../../assets/icon/images/concert/FRO_1004.jpg",
-            "../../assets/icon/images/concert/FRO_0840.jpg",
-            "../../assets/icon/images/concert/FRO_0758.jpg",
-            "../../assets/icon/images/concert/FRO_0682.jpg"
+            "../../assets/icon/images/concert/ec19/FRO_0917.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_0976.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1052.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1091.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1225.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1121.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1186.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3896.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3874.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3658.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3557.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3521.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_3197.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2876.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2594.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2529.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2362.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2359.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_2075.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1953.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1797.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1702.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_1004.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_0840.jpg",
+            "../../assets/icon/images/concert/ec19/FRO_0758.jpg"
             ],
           "date": "May 2019",
           "title": "Electric Castle 19'",
@@ -49,102 +65,138 @@
           "tag": "portrait",
           "topic": "photography",
           "tagColor": "secondary",
-          "image": "../../assets/icon/images/concert/FRO_1363.jpg",
+          "image": "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_1363.jpg",
-            "../../assets/icon/images/concert/FRO_1588.jpg"
+            "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0441.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0494.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/concert/FRO_1363.jpg",
-            "../../assets/icon/images/concert/FRO_1588.jpg",
-            "../../assets/icon/images/concert/FRO_1497.jpg"
+            "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0441.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0494.jpg"
           ],
           "date": "Jul 2019",
-          "title": "Portraits",
+          "title": "Portraits (part 4)",
+          "description": ""
+        },
+        {
+          "tag": "jazz", "topic": "photography", "tagColor": "primary",
+          "image": "../../assets/icon/images/concert/jitp19/FRO_6142.jpg",
+          "viewStatus": "preview", "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/concert/jitp19/FRO_6142.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_2842.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_2886.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/concert/jitp19/FRO_6142.jpg",
+            "../../assets/icon/images/concert/jitp19/DSC_6114.jpg",
+            "../../assets/icon/images/concert/jitp19/DSC_6131.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_2733.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_2842.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_2886.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_3205.jpg",
+            "../../assets/icon/images/concert/jitp19/FOO_3301.jpg"
+          ],
+          "date": "Oct 2019",
+          "title": "Jazz in the Park 19'",
+          "description": ""
+        },
+        {
+          "tag": "portrait",
+          "topic": "photography",
+          "tagColor": "secondary",
+          "image": "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
+          "viewStatus": "preview",
+          "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1588.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1588.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1497.jpg"
+          ],
+          "date": "Jul 2019",
+          "title": "Portraits (part 1)",
           "description": ""
         },
         {
           "tag": "awake",
           "topic": "photography",
           "tagColor": "primary",
-          "image": "../../assets/icon/images/concert/FRO_3780.jpg",
+          "image": "../../assets/icon/images/concert/awake19/FRO_8045.jpg",
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_7228.jpg",
-            "../../assets/icon/images/concert/FRO_1338.jpg"
+            "../../assets/icon/images/concert/awake19/FRO_8045.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_6575.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/concert/FRO_7228.jpg",
-            "../../assets/icon/images/concert/FRO_7237.jpg",
-            "../../assets/icon/images/concert/FRO_3780.jpg",
-            "../../assets/icon/images/concert/FRO_1338.jpg",
-            "../../assets/icon/images/concert/FRO_6575.jpg",
-            "../../assets/icon/images/concert/FRO_6608.jpg",
-            "../../assets/icon/images/concert/FRO_6737.jpg",
-            "../../assets/icon/images/concert/FRO_6912.jpg",
-            "../../assets/icon/images/concert/FRO_7000.jpg",
-            "../../assets/icon/images/concert/FRO_7046.jpg",
-            "../../assets/icon/images/concert/FRO_7205.jpg",
-            "../../assets/icon/images/concert/FRO_7219.jpg",
-            "../../assets/icon/images/concert/FRO_7222.jpg",
-            "../../assets/icon/images/concert/FRO_7474.jpg"
+            "../../assets/icon/images/concert/awake19/FRO_6608.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7474.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7401.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7205.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7219.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7222.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_6575.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7237.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7228.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_6737.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_6912.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7000.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_7046.jpg",
+            "../../assets/icon/images/concert/awake19/FRO_8041.jpg"
           ],
           "date": "May 2019",
           "title": "Awake 19'",
           "description": ""
         },
         {
-          "tag": "people",
+          "tag": "portrait",
           "topic": "photography",
           "tagColor": "secondary",
-          "image": "../../assets/icon/images/concert/FRO_0637.jpg",
+          "image": "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
-            "../../assets/icon/images/concert/FRO_9540.jpg",
-            "../../assets/icon/images/concert/FRO_9621.jpg"
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2590.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/concert/FRO_9540.jpg",
-            "../../assets/icon/images/concert/FRO_9621.jpg",
-            "../../assets/icon/images/concert/FRO_9493.jpg",
-            "../../assets/icon/images/concert/FRO_9711.jpg",
-            "../../assets/icon/images/concert/FRO_9506.jpg",
-            "../../assets/icon/images/concert/FRO_9491.jpg"
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2590.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2501.jpg"
+          ],
+          "date": "Jul 2019",
+          "title": "Portraits (part 2)",
+          "description": ""
+        },
+        {
+          "tag": "portrait",
+          "topic": "photography",
+          "tagColor": "secondary",
+          "image": "../../assets/icon/images/people/sabina-zmau/FRO_0637.jpg",
+          "viewStatus": "preview",
+          "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/people/sabina-zmau/FRO_9540.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9621.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/people/sabina-zmau/FRO_9540.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9621.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9493.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9711.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9482.jpg"
           ],
           "date": "Jul 2019",
           "title": "Refract Light",
           "description": "More here.."
-        },
-        {
-          "tag": "sw",
-          "topic": "photography",
-          "tagColor": "primary",
-          "image": "../../assets/icon/images/concert/FRO_6142.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/concert/FRO_6142.jpg",
-            "../../assets/icon/images/concert/FOO_2842.jpg",
-            "../../assets/icon/images/concert/FOO_2886.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/concert/FRO_6142.jpg",
-            "../../assets/icon/images/concert/DSC_6109.jpg",
-            "../../assets/icon/images/concert/DSC_6114.jpg",
-            "../../assets/icon/images/concert/DSC_6131.jpg",
-            "../../assets/icon/images/concert/FOO_2733.jpg",
-            "../../assets/icon/images/concert/FOO_2842.jpg",
-            "../../assets/icon/images/concert/FOO_2886.jpg",
-            "../../assets/icon/images/concert/FOO_3205.jpg",
-            "../../assets/icon/images/concert/FOO_3301.jpg"
-          ],
-          "date": "Oct 2018",
-          "title": "Summerwell 19'",
-          "description": ""
         },
         {
           "tag": "travel",
@@ -158,14 +210,52 @@
             "../../assets/icon/images/travel/FRO_1716.jpg"
           ],
           "postImages": [
-            "../../assets/icon/images/travel/FRO_1722.jpg",
-            "../../assets/icon/images/travel/FRO_1737.jpg",
             "../../assets/icon/images/travel/FRO_0514.jpg",
+            "../../assets/icon/images/travel/FRO_1722.jpg",
+            "../../assets/icon/images/travel/FRO_3226.jpg",
+            "../../assets/icon/images/travel/FRO_3336.jpg",
+            "../../assets/icon/images/travel/FRO_1737.jpg",
             "../../assets/icon/images/travel/FRO_1716.jpg",
             "../../assets/icon/images/travel/FRO_9694.jpg"
           ],
           "date": "Mar 2019",
           "title": "Travelling",
+          "description": ""
+        },
+        {
+          "tag": "portrait",
+          "topic": "photography",
+          "tagColor": "secondary",
+          "image": "../../assets/icon/images/people/monica-georgiana/FRO_1921.jpg",
+          "viewStatus": "preview",
+          "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/people/monica-georgiana/FRO_1921.jpg",
+            "../../assets/icon/images/people/monica-georgiana/FRO_1796.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/people/monica-georgiana/FRO_1921.jpg",
+            "../../assets/icon/images/people/monica-georgiana/FRO_1796.jpg"
+          ],
+          "date": "Jul 2019",
+          "title": "Portraits (part 5)",
+          "description": ""
+        },
+        {
+          "tag": "brc",
+          "topic": "photography",
+          "tagColor": "primary",
+          "image": "../../assets/icon/images/concert/brc19/FRO_9153.jpg",
+          "viewStatus": "preview",
+          "hide": false,
+          "previewImages": [
+            "../../assets/icon/images/concert/brc19/FRO_9153.jpg"
+          ],
+          "postImages": [
+            "../../assets/icon/images/concert/brc19/FRO_9153.jpg"
+          ],
+          "date": "Oct 2019",
+          "title": "Bucovina Rock Castle 19'",
           "description": ""
         }
     ],
@@ -175,28 +265,22 @@
         "autoHeight": true,
         "pager": true
     },
-    "story": {
-      "photography": {
-        "title": "Concert photography & Tech",
-        "description": "Hi there! My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
-      }
-    },
     "techPosts": [
       {
         "tag": "cloud",
         "topic": "tech",
         "tagColor": "primary",
-        "image": "../../assets/icon/images/concert/FRO_2878.jpg",
+        "image": "../../assets/icon/images/about/FRO_2878.jpg",
         "viewStatus": "preview",
         "hide": false,
         "previewImages": [
-          "../../assets/icon/images/concert/FRO_2878.jpg"
+          "../../assets/icon/images/about/FRO_2878.jpg"
         ],
         "postImages": [
-          "../../assets/icon/images/concert/FRO_2878.jpg"
+          "../../assets/icon/images/about/FRO_2878.jpg"
         ],
         "date": "Jul 2020",
-        "title": "Chappie, my bachelor thesis",
+        "title": "Chappie, data streaming",
         "description": ""
       }
     ],
@@ -205,17 +289,85 @@
         "tag": "me",
         "topic": "about",
         "tagColor": "primary",
-        "image": "../../assets/icon/images/FRO_3347.jpg",
+        "image": "../../assets/icon/images/about/FRO_3347.jpg",
         "viewStatus": "preview",
         "hide": false,
         "previewImages": [
-          "../../assets/icon/images/FRO_3347.jpg"
+          "../../assets/icon/images/about/FRO_3347.jpg"
         ],
         "postImages": [
-          "../../assets/icon/images/FRO_3347.jpg"
+          "../../assets/icon/images/about/FRO_3347.jpg"
         ],
         "date": "Jul 2020",
         "title": "Hi there!",
+        "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
+      },
+      {
+        "tag": "me",
+        "topic": "about",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/about/FRO_4121.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/about/FRO_4121.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/about/FRO_4121.jpg"
+        ],
+        "date": "Sep 2019",
+        "title": "Cycling",
+        "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
+      },
+      {
+        "tag": "me",
+        "topic": "about",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/about/FRO_2961.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/about/FRO_2961.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/about/FRO_2961.jpg"
+        ],
+        "date": "Sep 2019",
+        "title": "CS",
+        "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
+      },
+      {
+        "tag": "me",
+        "topic": "about",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/about/FRO_0001.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/about/FRO_0001.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/about/FRO_0001.jpg"
+        ],
+        "date": "Sep 2019",
+        "title": "Boosted",
+        "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
+      },
+      {
+        "tag": "me",
+        "topic": "about",
+        "tagColor": "primary",
+        "image": "../../assets/icon/images/about/Hashcode 44.jpg",
+        "viewStatus": "preview",
+        "hide": false,
+        "previewImages": [
+          "../../assets/icon/images/about/Hashcode 44.jpg"
+        ],
+        "postImages": [
+          "../../assets/icon/images/about/Hashcode 44.jpg"
+        ],
+        "date": "Sep 2019",
+        "title": "Google Hashcode",
         "description": "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. If you are wondering what am I doing.. that’s good! I don’t pretend to have a fancy answer for that, yet a little bit of retrospective always helps. I spend time and resources learning how to take better pictures, see what’s possible and improve my soft skills."
       }
     ]

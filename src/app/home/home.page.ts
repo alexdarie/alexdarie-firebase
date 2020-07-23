@@ -52,10 +52,22 @@ export class HomePage implements OnInit {
       this.initTags();
       this.breakpointObserver.observe(['(max-width: 1874px)']).subscribe(result => {
             if (result.matches) {
-              this.twoColumnsFormat();
+              if (this.postsType === 'tech') {
+                this.twoColumnsFormat(this.techPosts);
+              } else if (this.postsType === 'about') {
+                this.twoColumnsFormat(this.aboutMePosts);
+              } else {
+                this.twoColumnsFormat();
+              }
               this.noColumns = 2;
             } else {
-              this.threeColumnsFormat();
+              if (this.postsType === 'tech') {
+                this.threeColumnsFormat(this.techPosts);
+              } else if (this.postsType === 'about') {
+                this.threeColumnsFormat(this.aboutMePosts);
+              } else {
+                this.threeColumnsFormat();
+              }
               this.noColumns = 3;
             }
           });
@@ -165,7 +177,7 @@ export class HomePage implements OnInit {
       if (this.postsType === 'tech') {
         this.twoColumnsFormat(this.techPosts);
       } else if (this.postsType === 'about') {
-        this.threeColumnsFormat(this.aboutMePosts);
+        this.twoColumnsFormat(this.aboutMePosts);
       } else {
         this.twoColumnsFormat();
       }
@@ -188,28 +200,36 @@ export class HomePage implements OnInit {
     });
     await popover.present();
     const { data } = await popover.onWillDismiss();
-    this.postsType = data.postType;
-    if (this.noColumns === 2) {
-      if (this.postsType === 'tech') {
-        this.twoColumnsFormat(this.techPosts);
-        this.initTags(this.techPosts);
-      } else if (this.postsType === 'about') {
-        this.twoColumnsFormat(this.aboutMePosts);
-        this.initTags(this.aboutMePosts);
+    console.log(data);
+    if (data.tagType == null) {
+      this.postsType = data.postType;
+      if (this.noColumns === 2) {
+        if (this.postsType === 'tech') {
+          this.twoColumnsFormat(this.techPosts);
+          this.initTags(this.techPosts);
+        } else if (this.postsType === 'about') {
+          this.twoColumnsFormat(this.aboutMePosts);
+          this.initTags(this.aboutMePosts);
+        } else {
+          this.twoColumnsFormat();
+          this.initTags();
+        }
       } else {
-        this.twoColumnsFormat();
-        this.initTags();
+        if (this.postsType === 'tech') {
+          this.threeColumnsFormat(this.techPosts);
+          this.initTags(this.techPosts);
+        } else if (this.postsType === 'about') {
+          this.threeColumnsFormat(this.aboutMePosts);
+          this.initTags(this.aboutMePosts);
+        } else {
+          this.threeColumnsFormat();
+          this.initTags();
+        }
       }
-    } else {
-      if (this.postsType === 'tech') {
-        this.threeColumnsFormat(this.techPosts);
-        this.initTags(this.techPosts);
-      } else if (this.postsType === 'about') {
-        this.threeColumnsFormat(this.aboutMePosts);
-        this.initTags(this.aboutMePosts);
-      } else {
-        this.threeColumnsFormat();
-      }
+    } else if (data.tagType != null) {
+      this.postsType = data.postType;
+      this.reducePosts(data.tagType);
+      this.initTags();
     }
   }
 

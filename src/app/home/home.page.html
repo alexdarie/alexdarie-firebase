@@ -46,7 +46,11 @@
         <ion-card-content>
           {{event.description.substring(0, 200)}}
           <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+            <strong>
+              Open post
+            </strong>
+          </a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
@@ -58,14 +62,18 @@
           </ion-slide>
         </ion-slides>
         <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
-        <ion-card-header class="pointer">
+        <ion-card-header>
           <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           {{event.description.substring(0, 200)}}
           <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+            <strong>
+              Open post
+            </strong>
+          </a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
@@ -77,14 +85,18 @@
           </ion-slide>
         </ion-slides>
         <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
-        <ion-card-header class="pointer">
+        <ion-card-header>
           <ion-card-subtitle>{{event.date}}</ion-card-subtitle>
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           {{event.description.substring(0, 200)}}
           <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">Open post</a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+            <strong>
+              Open post
+            </strong>
+          </a></span>
         </ion-card-content>
       </ion-card>
     </ion-col>
