@@ -1,9 +1,15 @@
 <ion-content fullscreen style="margin-top: 10px">
   
-  <ion-toolbar style="--background: transparent;">
+  <ion-toolbar style="--background: transparent; margin-top: 20px;">
     <ion-text color="secondary">
     </ion-text>
     <ion-buttons slot="end" class="toolbar-buttons">
+      <ion-button type="submit" (click)="swipePrev()">
+        <ion-icon slot="icon-only" ios="chevron-back-outline" md="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button type="submit" (click)="swipeNext()">
+        <ion-icon slot="icon-only" ios="chevron-forward-outline" md="chevron-forward-outline"></ion-icon>
+      </ion-button>
       <ion-button (click)="dismiss()">
         <ion-icon slot="icon-only" ios="close" md="close"></ion-icon>
       </ion-button>
@@ -14,15 +20,19 @@
     <div class="story-content">
       <h1 class="event-title">{{this.event.title}}</h1>
       <h3>{{this.event.date}}</h3>
-      <p>{{this.event.description}}</p>
+      <p class="paragraph" *ngFor="let d of this.event.description">{{d}}</p>
     </div>
   </ion-col>
 
-  <ion-row class="row-content">
-    <ion-col class="col-content">
-      <img src={{image}} class="image-content" *ngFor="let image of event.postImages"/>
-    </ion-col>
-  </ion-row>
+  <!-- <ion-row class="row-content"> -->
+    <ion-card style="box-shadow: none !important;"> 
+      <ion-slides [options]="slideOpts" #slider>
+        <ion-slide *ngFor="let image of event.postImages">
+          <img src={{image}} />
+        </ion-slide>
+      </ion-slides>
+    </ion-card> 
+  <!-- </ion-row> -->
   
 </ion-content>
   

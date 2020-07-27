@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80vw;
 }
 
 .jump-top {
@@ -13,13 +14,13 @@
     width: 80%;
 }
 
-.image {
+.swiper-slide img {
     width: 80%;
+    height: 70vh;
 }
 
-.image-content {
+.image {
     width: 80%;
-    padding: 10px;
 }
 
 .fab-btn {
@@ -68,6 +69,11 @@
     width: 80%;
 }
 
+.paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 @media screen and (max-width: 767px) {
     .image-content {
         width: 100%;
@@ -75,6 +81,10 @@
     }
 
     .slides {
+        width: 90%;
+    }
+
+    .swiper-slide img {
         width: 90%;
     }
 }

@@ -35,7 +35,7 @@
       <ion-card *ngFor="let event of columns.left"> 
         <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
           <ion-slide *ngFor="let image of event.previewImages">
-            <img src={{image}} tappable >
+            <img src={{image}} >
           </ion-slide>
         </ion-slides>
         <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
@@ -44,9 +44,9 @@
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description.substring(0, 200)}}
-          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+          {{event.description[0].substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description[0].length > 200">... <strong>Read more</strong></a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description[0].length <= 200">
             <strong>
               Open post
             </strong>
@@ -58,7 +58,7 @@
       <ion-card *ngFor="let event of columns.middle"> 
         <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
           <ion-slide *ngFor="let image of event.previewImages">
-            <img src={{image}} tappable />
+            <img src={{image}} />
           </ion-slide>
         </ion-slides>
         <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
@@ -67,9 +67,9 @@
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description.substring(0, 200)}}
-          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+          {{event.description[0].substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description[0].length > 200">... <strong>Read more</strong></a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description[0].length <= 200">
             <strong>
               Open post
             </strong>
@@ -81,7 +81,7 @@
       <ion-card *ngFor="let event of columns.right"> 
         <ion-slides *ngIf="event.viewStatus === 'preview'" [options]="slideOpts">
           <ion-slide *ngFor="let image of event.previewImages">
-            <img src={{image}} tappable />
+            <img src={{image}} />
           </ion-slide>
         </ion-slides>
         <img *ngIf="event.viewStatus !== 'preview'" src={{event.image}} />
@@ -90,9 +90,9 @@
           <ion-card-title>{{event.title}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          {{event.description.substring(0, 200)}}
-          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description.length > 200">... Read more</a></span>
-          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description.length <= 200">
+          {{event.description[0].substring(0, 200)}}
+          <span><a class="pointer" (click)="presentAlbum(event)" *ngIf="event.description[0].length > 200">... <strong>Read more</strong></a></span>
+          <span><a class="pointer open-post" (click)="presentAlbum(event)" *ngIf="event.description[0].length <= 200">
             <strong>
               Open post
             </strong>
