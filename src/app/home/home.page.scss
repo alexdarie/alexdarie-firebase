@@ -26,6 +26,15 @@
     text-decoration: none;
   }
 
+  ion-list {
+    border-radius: 5px;;
+  }
+
+  .card-title {
+    margin: 15px;
+    font-size: 16px;
+  }
+
   ion-toolbar {
     --background: transparent;
     --ion-color-base: transparent !important;
@@ -46,6 +55,16 @@
 
   .row-content-about {
     margin: 10px 10vw 0 10vw;
+  }
+
+  .post-icons {
+    font-size: 17px;
+    margin-right: 2px;
+  }
+
+  .post-count {
+    font-size: 15px;
+    margin: 5px 10px 5px -3px;
   }
 
   .category-title {

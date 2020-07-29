@@ -14,6 +14,10 @@ export class EventModalPage implements OnInit, AfterViewInit {
   img: any;
   event: any;
   currentSegment = 'pictures';
+  showText = false;
+  currentIconForText = 1;
+  textIconOptions = ['text', 'text-outline'];
+  textIconName = this.textIconOptions[this.currentIconForText];
   slideOpts = {
     initialSlide: 0,
     speed: 400,
@@ -37,12 +41,14 @@ export class EventModalPage implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // Fixing some weird bug related to the freezing of the slides 
+    // after iterating over them once.
       setTimeout(
-        ()=>{
-          if(this.slides){
+        () => {
+          if (this.slides){
             this.slides.update();
           }
-        },300
+        }, 300
       );
   }
 
@@ -54,16 +60,21 @@ export class EventModalPage implements OnInit, AfterViewInit {
     });
   }
 
-  segmentChanged(event) {
-    this.currentSegment = event.detail.value;
-  }
-
   swipeNext(){
     this.slides.slideNext();
   }
 
   swipePrev(){
     this.slides.slidePrev();
+  }
+
+  switchBetweenTextAndPhoto() {
+    this.showText = !this.showText;
+    console.log(this.textIconName);
+
+    this.currentIconForText = (this.currentIconForText + 1) % 2;
+    this.textIconName = this.textIconOptions[this.currentIconForText];
+    console.log(this.textIconName);
   }
 
 }

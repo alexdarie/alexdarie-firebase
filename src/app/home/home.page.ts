@@ -32,7 +32,6 @@ export class HomePage implements OnInit {
   postsType = 'photography';
   noColumns: number;
   columns = {left: [], middle: [], right: []};
-  techColumns = {left: [], middle: [], right: []};
   currentSegment = 'preview';
   slideOpts = {};
 
@@ -96,32 +95,31 @@ export class HomePage implements OnInit {
     }
   }
 
+  oneColumnFormat(picturePosts = this.photographyPosts) {
+    /* Switching betweem three and two columns grid display. */
+
+    const n = picturePosts.length;
+    this.columns.left = picturePosts.slice(0, n + 1);
+    this.columns.middle = [];
+    this.columns.right = [];
+  }
+
   twoColumnsFormat(picturePosts = this.photographyPosts) {
     /* Switching betweem three and two columns grid display. */
 
-    let n = picturePosts.length;
+    const n = picturePosts.length;
     this.columns.left = picturePosts.slice(0, n / 2);
     this.columns.middle = picturePosts.slice((n / 2), n + 1);
     this.columns.right = [];
-
-    n = this.techPosts.length;
-    this.techColumns.left = this.techPosts.slice(0, n / 2);
-    this.techColumns.middle = this.techPosts.slice((n / 2), n + 1);
-    this.techColumns.right = [];
   }
 
   threeColumnsFormat(picturePosts = this.photographyPosts) {
     /* Switching betweem two and three columns grid display. */
 
-    let n = picturePosts.length;
+    const n = picturePosts.length;
     this.columns.left = picturePosts.slice(0, n / 3);
     this.columns.middle = picturePosts.slice((n / 3), (2 * n) / 3);
     this.columns.right = picturePosts.slice(((2 * n) / 3), n + 1);
-
-    n = this.techPosts.length;
-    this.techColumns.left = this.techPosts.slice(0, n / 3);
-    this.techColumns.middle = this.techPosts.slice((n / 3), (2 * n) / 3);
-    this.techColumns.right = this.techPosts.slice(((2 * n) / 3), n + 1);
   }
 
   async presentAlbum(event) {
