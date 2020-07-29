@@ -153,7 +153,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row *ngIf="postsType === 'tech'" style="width: 80vw; margin: auto; margin-top: 20px;">
+  <ion-row *ngIf="postsType === 'tech'" style="width: 80vw; margin-top: 20px;">
     <ion-col style="min-width: 50vw">
       <ion-list>
         <ion-list-header>
@@ -259,67 +259,40 @@
     </ion-col>
   </ion-row>
 
-  <ion-row class="about-me-row" *ngIf="postsType === 'about'">
-      <ion-list>
-        <ion-list-header>
-          Background story
-        </ion-list-header>
+  <ion-row class="row-content" *ngIf="postsType === 'about'">
+    <ion-col class="col-content">
+    <ion-list class="about-me-row">
+      <ion-list-header>
+        Background story
+      </ion-list-header>
 
-        <ion-item lines="none" style="font-size: 15px; color: gray; text-align: left;">
-          <ion-row>
-            <ion-col style="width: 60%;">
-              <p>My name is Alex, and I am a computer science graduate, grown in the dot-com bubble 
-                with a contagious curiosity for photography and tech. I studied Computer Science at 
-                the Babes-Bolyai University in Cluj-Napoca, Romania, for the last 3 years and I plan 
-                on continuing with a Master's Degree on Artificial Intelligence.
-              </p>
-              <img src="../../assets/icon/images/about/me1.jpg" style="height: auto; border-radius: 5px; margin-top: auto;">
-            </ion-col>
-            <ion-col style="width: 40%; margin: 0 auto auto auto;">
-              <img src="../../assets/icon/images/about/FRO_3347.jpg" style="width: auto; border-radius: 5px;">
-            </ion-col>
-          </ion-row>
-        </ion-item>
-        <ion-item lines="none">
-          <p style="font-size: 15px; color: gray; text-align: left; margin-top: 15px;">
-            Growing up, I always had such a passion for technology, whether that be watching marvelous 
-            pieces of engineering, writing algorithms to solve my class assignments, or even just taking 
-            pictures and editing them. Being able to express myself in pictures is the driving force that 
-            allowed me to evolve and get involved in adjacent activities. For most of the pictures I do 
-            sweat (like a lot) and it is exhausing, yet it is one of those activities asking for creative 
-            decisions and it really helps to go through the process, from time to time.</p>
-        </ion-item>
-      </ion-list>
-
-      <!-- <ion-list>
-        <ion-list-header>
-          Background story
-        </ion-list-header>
-
-        <ion-item lines="none" style="font-size: 15px; color: gray; text-align: left;">
-          <ion-row>
-            <ion-col style="width: 60%; margin: 0 auto auto auto;">
-              <p>My name is Alex, and I am a computer science graduate, grown in the dot-com bubble 
-                with a contagious curiosity for photography and tech. I studied Computer Science at 
-                the Babes-Bolyai University in Cluj-Napoca, Romania, for the last 3 years and I plan 
-                on continuing with a Master's Degree on Artificial Intelligence.
-              </p>
-              <img src="../../assets/icon/images/about/me1.jpg" style="height: auto; border-radius: 5px;">
-            </ion-col>
-            <ion-col style="width: 40%; margin: 0 auto auto auto;">
-              <img src="../../assets/icon/images/about/FRO_3347.jpg" style="width: auto; border-radius: 5px;">
-            </ion-col>
-          </ion-row>
-        </ion-item>
-        <ion-item lines="none">
-          <p style="font-size: 15px; color: gray; text-align: left; margin-top: 15px;">My name is Alex, and I am a computer science graduate, grown in the dot-com bubble 
-            with a contagious curiosity for photography and tech. I studied Computer Science at 
-            the Babes-Bolyai University in Cluj-Napoca, Romania, for the last 3 years and I plan 
-            on continuing with a Master's Degree on Artificial Intelligence.</p>
-        </ion-item>
-      </ion-list> -->
+      <ion-item lines="none" style="font-size: 15px; color: gray; text-align: left;">
+        <ion-row>
+          <ion-col style="width: 60%;">
+            <p>My name is Alex, and I am a computer science graduate, grown in the dot-com bubble 
+              with a contagious curiosity for photography and tech. I studied Computer Science at 
+              the Babes-Bolyai University in Cluj-Napoca, Romania, for the last 3 years and I plan 
+              on continuing with a Master's Degree on Artificial Intelligence.
+            </p>
+            <img src="../../assets/icon/images/about/me1.jpg" style="height: auto; border-radius: 5px; margin-top: auto;">
+          </ion-col>
+          <ion-col style="width: 40%; margin: 0 auto auto auto;">
+            <img src="../../assets/icon/images/about/FRO_3347.jpg" style="width: auto; border-radius: 5px;">
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item lines="none">
+        <p style="font-size: 15px; color: gray; text-align: left; margin-top: 15px;">
+          Growing up, I always had such a passion for technology, whether that be watching marvelous 
+          pieces of engineering, writing algorithms to solve my class assignments, or even just taking 
+          pictures and editing them. Being able to express myself in pictures is the driving force that 
+          allowed me to evolve and get involved in adjacent activities. For most of the pictures I do 
+          sweat (like a lot) and it is exhausing, yet it is one of those activities asking for creative 
+          decisions and it really helps to go through the process, from time to time.</p>
+      </ion-item>
+    </ion-list>
+    </ion-col>
   </ion-row>
-
 
   <ion-footer class="bottom">
     <ion-grid>
