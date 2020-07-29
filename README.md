@@ -1,6 +1,8 @@
 # alexdarie-firebase
 Personal website https://alexdarie.me built with Ionic, hosted on Firebase and accessible through Namecheap.
 
+![Firebase console, hosting dashboard][page_demo]
+
 ### Build Ionic for Browser
 
 ```
@@ -35,6 +37,8 @@ add the TXT Record. There are two additional A records which can be faound in th
 [step_three]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-12%20at%201.22.36%20PM.png "Namecheap console, advanced dns dashboard"
 
 [step_four]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-12%20at%201.22.53%20PM.png "Namecheap console, records dashboard"
+
+[page_demo]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-29%20at%204.23.34%20PM.png "Page demo"
 
 ### Versions
 
