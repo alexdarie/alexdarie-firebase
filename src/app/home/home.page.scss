@@ -97,9 +97,10 @@
   }
 
   .site-title {
-    margin: 2vh 0 0 11vw;
-    font-weight: 350;
+    margin: 1.5vh 0 0 11vw;
+    font-size: 34px;
     color: white;
+    font-family: 'Monofett', cursive; 
   }
 
   .toolbar-buttons {
@@ -111,9 +112,9 @@
   }
 
   .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/2985463.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url("../../assets/icon/images/2001.jpg");
     height: 50vh;
-    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

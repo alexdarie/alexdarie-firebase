@@ -12,10 +12,24 @@
             "../../assets/icon/images/people/georgiana-apopei/FRO_0083.jpg",
             "../../assets/icon/images/people/georgiana-apopei/FRO_0329.jpg",
             "../../assets/icon/images/people/georgiana-apopei/FRO_0180.jpg",
-            "../../assets/icon/images/people/georgiana-apopei/FRO_0397.jpg"
+            "../../assets/icon/images/people/georgiana-apopei/FRO_0397.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0441.jpg",
+            "../../assets/icon/images/people/alexandra-nistor/FOO_0494.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1588.jpg",
+            "../../assets/icon/images/people/ariadna-belciug/FRO_1497.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2590.jpg",
+            "../../assets/icon/images/people/roxana-cristurean/FRO_2501.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9540.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9621.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9493.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9711.jpg",
+            "../../assets/icon/images/people/sabina-zmau/FRO_9482.jpg"
           ],
           "date": "Jul 2019",
-          "title": "Portraits (part 1)",
+          "title": "Portraits",
           "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
         },
         {
@@ -56,27 +70,6 @@
           "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
         },
         {
-          "tag": "portrait",
-          "topic": "photography",
-          "tagColor": "secondary",
-          "image": "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
-            "../../assets/icon/images/people/alexandra-nistor/FOO_0441.jpg",
-            "../../assets/icon/images/people/alexandra-nistor/FOO_0494.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/people/alexandra-nistor/1.5.jpg",
-            "../../assets/icon/images/people/alexandra-nistor/FOO_0441.jpg",
-            "../../assets/icon/images/people/alexandra-nistor/FOO_0494.jpg"
-          ],
-          "date": "Jul 2019",
-          "title": "Portraits (part 2)",
-          "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
-        },
-        {
           "tag": "jazz", "topic": "photography", "tagColor": "primary",
           "image": "../../assets/icon/images/concert/jitp19/FRO_6142.jpg",
           "viewStatus": "preview", "hide": false,
@@ -101,26 +94,6 @@
           ],
           "date": "Oct 2019",
           "title": "Jazz in the Park ",
-          "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
-        },
-        {
-          "tag": "portrait",
-          "topic": "photography",
-          "tagColor": "secondary",
-          "image": "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
-            "../../assets/icon/images/people/ariadna-belciug/FRO_1588.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/people/ariadna-belciug/FRO_1363.jpg",
-            "../../assets/icon/images/people/ariadna-belciug/FRO_1588.jpg",
-            "../../assets/icon/images/people/ariadna-belciug/FRO_1497.jpg"
-          ],
-          "date": "Jul 2019",
-          "title": "Portraits (part 3)",
           "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
         },
         {
@@ -165,48 +138,6 @@
           "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
         },
         {
-          "tag": "portrait",
-          "topic": "photography",
-          "tagColor": "secondary",
-          "image": "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
-            "../../assets/icon/images/people/roxana-cristurean/FRO_2590.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/people/roxana-cristurean/FRO_2690.jpg",
-            "../../assets/icon/images/people/roxana-cristurean/FRO_2590.jpg",
-            "../../assets/icon/images/people/roxana-cristurean/FRO_2501.jpg"
-          ],
-          "date": "Jul 2019",
-          "title": "Portraits (part 4)",
-          "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
-        },
-        {
-          "tag": "portrait",
-          "topic": "photography",
-          "tagColor": "secondary",
-          "image": "../../assets/icon/images/people/sabina-zmau/FRO_0637.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/people/sabina-zmau/FRO_9540.jpg",
-            "../../assets/icon/images/people/sabina-zmau/FRO_9621.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/people/sabina-zmau/FRO_9540.jpg",
-            "../../assets/icon/images/people/sabina-zmau/FRO_9621.jpg",
-            "../../assets/icon/images/people/sabina-zmau/FRO_9493.jpg",
-            "../../assets/icon/images/people/sabina-zmau/FRO_9711.jpg",
-            "../../assets/icon/images/people/sabina-zmau/FRO_9482.jpg"
-          ],
-          "date": "Jul 2019",
-          "title": "Refract Light",
-          "description": ["More here.."]
-        },
-        {
           "tag": "sw",
           "topic": "photography",
           "tagColor": "secondary",
@@ -214,6 +145,7 @@
           "viewStatus": "preview",
           "hide": false,
           "previewImages": [
+            "../../assets/icon/images/1997.jpg",
             "../../assets/icon/images/concert/sw19/FRO_4152.jpg",
             "../../assets/icon/images/concert/sw19/FRO_5121.jpg"
           ],
@@ -240,30 +172,6 @@
           "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
         },
         {
-          "tag": "travel",
-          "topic": "photography",
-          "tagColor": "primary",
-          "image": "../../assets/icon/images/travel/FRO_1716.jpg",
-          "viewStatus": "preview",
-          "hide": false,
-          "previewImages": [
-            "../../assets/icon/images/travel/FRO_0514.jpg",
-            "../../assets/icon/images/travel/FRO_1716.jpg"
-          ],
-          "postImages": [
-            "../../assets/icon/images/travel/FRO_0514.jpg",
-            "../../assets/icon/images/travel/FRO_1722.jpg",
-            "../../assets/icon/images/travel/FRO_3226.jpg",
-            "../../assets/icon/images/travel/FRO_3336.jpg",
-            "../../assets/icon/images/travel/FRO_1737.jpg",
-            "../../assets/icon/images/travel/FRO_1716.jpg",
-            "../../assets/icon/images/travel/FRO_9694.jpg"
-          ],
-          "date": "Mar 2019",
-          "title": "Travelling",
-          "description": ["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."]
-        },
-        {
           "tag": "brc",
           "topic": "photography",
           "tagColor": "primary",
@@ -286,125 +194,5 @@
         "speed": 400,
         "autoHeight": true,
         "pager": true
-    },
-    "techPosts": [
-      {
-        "tag": "cloud",
-        "topic": "tech",
-        "tagColor": "primary",
-        "image": "../../assets/icon/images/about/FRO_2878.jpg",
-        "viewStatus": "preview",
-        "hide": false,
-        "previewImages": [
-          "../../assets/icon/images/about/FRO_2878.jpg",
-          "../../assets/icon/images/tech/FRO_2843.jpg",
-          "../../assets/icon/images/tech/FRO_2862.jpg"
-        ],
-        "postImages": [
-          "../../assets/icon/images/about/FRO_2878.jpg",
-          "../../assets/icon/images/tech/FRO_2843.jpg",
-          "../../assets/icon/images/tech/FRO_2862.jpg",
-          "../../assets/icon/images/tech/FRO_0001.jpg"
-        ],
-        "date": "Jul 2020",
-        "title": "Chappie",
-        "description": ["More later"]
-      },
-      {
-        "tag": "hashcode",
-        "topic": "tech",
-        "tagColor": "primary",
-        "image": "../../assets/icon/images/about/Hashcode 44.jpg",
-        "viewStatus": "preview",
-        "hide": false,
-        "previewImages": [
-          "../../assets/icon/images/about/Hashcode 44.jpg"
-        ],
-        "postImages": [
-          "../../assets/icon/images/about/Hashcode 44.jpg"
-        ],
-        "date": "Jul 2020",
-        "title": "Google Hashcode",
-        "description": ["More later"]
-      }
-    ],
-    "aboutMePosts": [
-      {
-        "tag": "me",
-        "topic": "about",
-        "tagColor": "primary",
-        "image": "../../assets/icon/images/about/FRO_3347.jpg",
-        "viewStatus": "preview",
-        "hide": false,
-        "previewImages": [
-          "../../assets/icon/images/about/FRO_2961.jpg",
-          "../../assets/icon/images/about/FRO_3347.jpg"
-        ],
-        "postImages": [
-          "../../assets/icon/images/about/FRO_2961.jpg",
-          "../../assets/icon/images/about/FRO_3347.jpg"
-        ],
-        "date": "Jul 2020",
-        "title": "Hi there!",
-        "description": [
-          "My name is Alex, and I am a computer science graduate, grown in the dot-com bubble with a contagious curiosity for photography and tech. I studied Computer Science at the Babes-Bolyai University in Cluj-Napoca, Romania, for the last 3 years and I plan on continuing with a Master's Degree on Artificial Intelligence.",
-          "Growing up, I always had such a passion for technology, whether that be fixing computers, writing algorithms to solve my class assignments, or even just taking pictures and editing them. Being able to express myself in pictures is the driving force that allowed me to evolve and get involved in adjacent activities. For most of the pictures I do sweat (like a lot) and it is exhausing, yet it is one of those activities asking for creative decisions and it really helps to go through the process, from time to time.", 
-          "Even though there is a section on this website with regard to the pictures I took over the years, they are not some artistic creations, but rather a set of pictures in which I tried to get the best angle, story and light."
-        ]
-      },
-      {
-        "tag": "me",
-        "topic": "about",
-        "tagColor": "primary",
-        "image": "../../assets/icon/images/about/FRO_0001.jpg",
-        "viewStatus": "preview",
-        "hide": false,
-        "previewImages": [
-          "../../assets/icon/images/about/FRO_4121.jpg",
-          "../../assets/icon/images/about/IMG_20180822_210333.jpg",
-          "../../assets/icon/images/about/IMG_20190912_165957_1.jpg"
-        ],
-        "postImages": [
-          "../../assets/icon/images/about/FRO_4121.jpg",
-          "../../assets/icon/images/about/IMG_20180822_210333.jpg",
-          "../../assets/icon/images/about/IMG_20190912_165957_1.jpg"
-        ],
-        "date": "Sep 2019",
-        "title": "Boosted",
-        "description": [
-          "Alongside school and university, I jumped between activities to keep myself focused. Yes, as technology evolves alongside us, it is hard to differentiate between work and personal time, yet sometimes it has it's benefits being so."
-        ]
-      },
-      {
-        "tag": "me",
-        "topic": "about",
-        "tagColor": "primary",
-        "image": "../../assets/icon/images/about/FRO_0001.jpg",
-        "viewStatus": "preview",
-        "hide": false,
-        "previewImages": [
-          "../../assets/icon/images/uni/IMG_20190105_234649.jpg",
-          "../../assets/icon/images/uni/IMG_20190829_144830.jpg",
-          "../../assets/icon/images/uni/IMG_20190830_192347.jpg",
-          "../../assets/icon/images/uni/IMG_20191012_013655.jpg"
-        ],
-        "postImages": [
-          "../../assets/icon/images/uni/IMG_20190105_234649.jpg",
-          "../../assets/icon/images/uni/IMG_20190829_144830.jpg",
-          "../../assets/icon/images/uni/IMG_20190830_192347.jpg",
-          "../../assets/icon/images/uni/IMG_20191012_013655.jpg",
-          "../../assets/icon/images/uni/IMG_20191215_185607.jpg",
-          "../../assets/icon/images/uni/IMG_20191216_205433.jpg",
-          "../../assets/icon/images/uni/IMG_20191216_210908.jpg",
-          "../../assets/icon/images/uni/IMG_20200110_114456.jpg",
-          "../../assets/icon/images/uni/MVIMG_20190814_071203.jpg",
-          "../../assets/icon/images/uni/IMG_20200212_231851.jpg"
-        ],
-        "date": "Sep 2019",
-        "title": "Computer Science Uni in Cluj-Napoca",
-        "description": [
-          "More later"
-        ]
-      }
-    ]
+    }
 }
