@@ -5,7 +5,7 @@ On the master:
 ![Firebase console, hosting dashboard][page_demo]
 
 Redesigned version:
-![Firebase console, hosting dashboard][page_demo]
+![Firebase console, hosting dashboard][page_demo_redesign]
 
 ### Download and Setup
 
@@ -50,6 +50,8 @@ add the TXT Record. There are two additional A records which can be faound in th
 [step_four]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-12%20at%201.22.53%20PM.png "Namecheap console, records dashboard"
 
 [page_demo]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-29%20at%204.23.34%20PM.png "Page demo"
+
+[page_demo_redesign]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-08-04%20at%209.39.10%20PM.png "Page demo redesign"
 
 ### Versions
 
