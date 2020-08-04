@@ -3,6 +3,13 @@ Personal website https://alexdarie.me built with Ionic, hosted on Firebase and a
 
 ![Firebase console, hosting dashboard][page_demo]
 
+### Download and Setup
+
+```
+git clone <>
+npm install --save-dev @angular-devkit/build-angular
+```
+
 ### Build Ionic for Browser
 
 ```
