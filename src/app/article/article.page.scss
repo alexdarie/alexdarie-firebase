@@ -1,0 +1,141 @@
+.article-body {
+    margin: 0 30vw 0 30vw; 
+}
+
+.article-body-lg {
+    margin: 0 20vw 0 20vw; 
+}
+
+.author {
+    font-size: 13px;
+    color: gray;
+    font-family: 'Open Sans', serif;
+}
+
+.post-count {
+    font-family: 'Open Sans', serif;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-family: 'Open Sans', serif;
+}
+
+.card-title {
+    font-family: 'Prata', serif;
+}
+
+.card-content {
+    font-family: 'Open Sans', serif;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('https://via.placeholder.com/2000x1333');
+  
+    /* Full height */
+    height: 100vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ion-toolbar {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.site-title {
+    margin: 5px 0 0 1vw;
+    font-size: 27px;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: black;
+  }
+
+.just-site-title {
+    font-family: 'Monofett', cursive; 
+    font-size: 20px;
+}
+
+.title {
+    font-family: 'Open Sans', serif;
+}
+
+.posts-centered-container {
+    margin: 30px 10vw 30px 10vw;
+    background-color: white;
+}
+
+.news-min-width {
+    min-width: 190px;
+}
+
+.border {
+    border-left: 5px solid;
+    border-left-width: 5px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-image: linear-gradient(to bottom, rgba(2,0,36,1), rgba(9,9,121,1), rgba(0,212,255,1));
+    border-image-slice: 1;
+    height: 100%;
+}
+
+// .swiper-slide img {
+//     width: 100%;
+//     height: 70vh;
+// }
+
+.swiper-slide {
+    --background: transparent;
+}
+
+@media screen and (min-width: 2000px) {
+    .posts-centered-container {
+      margin: 30px 20vw 30px 20vw;
+    }
+}
+  
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .article-body {
+        margin: 0 20vw 0 20vw; 
+    }
+
+    .article-body-lg {
+        margin: 0 10vw 0 10vw; 
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .posts-centered-container {
+        margin: 30px 2vw 30px 2vw;
+    }
+
+    .article-body {
+        margin: 0 10vw 0 10vw; 
+    }
+
+    .news-min-width {
+        min-width: 250px;
+    }
+
+    .article-body-lg {
+        margin: 0 3vw 0 3vw; 
+    }
+}
+  
+@media screen and (max-width: 950px) {
+    .posts-centered-container {
+        margin: 30px 1vw 30px 1vw;
+    }
+}

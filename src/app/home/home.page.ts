@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ModalController } from '@ionic/angular';
-import { EventModalPage } from '../event-modal/event-modal.page';
+import { IonSlides, Platform } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
-import { PopoverController } from '@ionic/angular';
-import { HomeMenuPage } from '../home-menu/home-menu.page';
+import { ModalController } from '@ionic/angular';
+import { AlbumPage } from '../album/album.page';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home',
@@ -13,120 +13,155 @@ import { HomeMenuPage } from '../home-menu/home-menu.page';
 })
 export class HomePage implements OnInit {
 
-  spaceEnoughForTags: boolean;
-  photographyPosts = [];
-  techPosts = [];
-  aboutMePosts = [];
-  story = {
-    photography: {
-      title: '',
-      description: ''
+  @ViewChild('slider')  slides: IonSlides;
+
+  // Slide options are set by default on medium format view. It
+  // addapts to screen size.
+  crntSldOpt: number;
+  slideOptions = {
+    1: {
+      initialSlide: 0,
+      speed: 600,
+      loop: true,
+      // autoplay: true
     },
-    tech: {
-      title: '',
-      description: ''
+    2: {
+      initialSlide: 0,
+      speed: 400,
+      slidesPerView: 4.5
+    },
+    3: {
+      initialSlide: 0,
+      speed: 400,
+      slidesPerView: 2.5
+    },
+    4: {
+      initialSlide: 0,
+      speed: 400,
+      slidesPerView: 2.2
     }
   };
 
-  tags = [];
-  postsType = 'photography';
-  noColumns: number;
-  columns = {left: [], middle: [], right: []};
-  currentSegment = 'preview';
-  slideOpts = {};
+  // A default structure for the content that will be later loaded.
+  articles = {
+    popular: [],
+    tipsAndTricks: [],
+    concerts: [],
+    cs: []
+  };
+  projectsDescription: string;
+  collectionName = 'articles';
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
-    private modalController: ModalController,
     private http: HttpClient,
-    public popoverController: PopoverController) {
+    private modalController: ModalController,
+    private breakpointObserver: BreakpointObserver,
+    private platform: Platform,
+    private firestore: AngularFirestore
+  ) {
   }
 
-  ngOnInit() {
-    this.http.get('../../assets/posts.json').subscribe(res => {
-      this.photographyPosts = res['photographyPosts'];
-      this.techPosts = res['techPosts'];
-      this.aboutMePosts = res['aboutMePosts'];
-      this.slideOpts = res['slideOpts'];
-      this.initTags();
-      this.breakpointObserver.observe(['(max-width: 1874px)']).subscribe(result => {
-            if (result.matches) {
-              if (this.postsType === 'tech') {
-                this.twoColumnsFormat(this.techPosts);
-              } else if (this.postsType === 'about') {
-                this.twoColumnsFormat(this.aboutMePosts);
-              } else {
-                this.twoColumnsFormat();
-              }
-              this.noColumns = 2;
-            } else {
-              if (this.postsType === 'tech') {
-                this.threeColumnsFormat(this.techPosts);
-              } else if (this.postsType === 'about') {
-                this.threeColumnsFormat(this.aboutMePosts);
-              } else {
-                this.threeColumnsFormat();
-              }
-              this.noColumns = 3;
-            }
-          });
-      this.breakpointObserver.observe(['(max-width: 750px)']).subscribe(result => {
-        if (result.matches) {
-          this.spaceEnoughForTags = false;
-        } else {
-          this.spaceEnoughForTags = true;
-        }
-      });
-    },
-    (err) => {
-      alert('failed loading json data');
+  async ngOnInit() {
+    this.crntSldOpt = 2;
+    let snapshot = await this.firestore.collection(this.collectionName).ref
+                            .orderBy('date', 'desc')
+                            .get();
+    snapshot.forEach(doc => {
+      this.processSnapshopDoc(doc);
+    });
+
+    snapshot = await this.firestore.collection('metadata').ref
+                            .get();
+    snapshot.forEach(doc => {
+      this.processMetadata(doc);
+    });
+
+    this.setViewBreakpoints();
+    this.setPlatformReadyRoutine();
+  }
+
+  setViewBreakpoints() {
+    this.breakpointObserver.observe(['(max-width: 1020px)']).subscribe(result => {
+      if (result.matches) {
+        this.crntSldOpt = 3;
+      } else {
+        this.crntSldOpt = 2;
+      }
+    });
+
+    this.breakpointObserver.observe(['(max-width: 540px)']).subscribe(result => {
+      if (result.matches) {
+        this.crntSldOpt = 4;
+      } else {
+        this.crntSldOpt = 3;
+      }
     });
   }
 
-  initTags(picturePosts = this.photographyPosts) {
-    /* Initialize tags list content. */
-
-    this.tags = [];
-    for (const post of picturePosts) {
-      const tag = post.tag;
-      if (!this.tags.includes(tag)) {
-        this.tags.push(tag);
+  setPlatformReadyRoutine() {
+    this.platform.ready().then((readySource) => {
+      const width = this.platform.width();
+      if (width > 1020) {
+        this.crntSldOpt = 2;
+      } else if (width > 520) {
+        this.crntSldOpt = 3;
+      } else {
+        this.crntSldOpt = 4;
       }
+    });
+  }
+
+  processSnapshopDoc(doc) {
+    const data = doc.data();
+    if (data['category'] === 'cs') {
+      this.articles.cs.push(data);
+    }
+    else if (data['category'] === 'concert') {
+      this.articles.concerts.push(data);
+    }
+    else if (data['category'] === 'tips-and-tricks') {
+      this.addToTipsAndTricks(data, 3);
+    }
+    this.buildMostPopularArticles(data);
+  }
+
+  processMetadata(doc) {
+    const key = doc.id;
+    if (key === 'project') {
+      this.projectsDescription = doc.data()['description'];
     }
   }
 
-  oneColumnFormat(picturePosts = this.photographyPosts) {
-    /* Switching betweem three and two columns grid display. */
-
-    const n = picturePosts.length;
-    this.columns.left = picturePosts.slice(0, n + 1);
-    this.columns.middle = [];
-    this.columns.right = [];
+  addToTipsAndTricks(data, maxPerRow) {
+    const tt = this.articles.tipsAndTricks;
+    const n = tt.length - 1;
+    if (tt.length === 0 || tt[n].length === maxPerRow) {
+      tt.push([data]);
+    } else {
+      tt[n].push(data);
+    }
   }
 
-  twoColumnsFormat(picturePosts = this.photographyPosts) {
-    /* Switching betweem three and two columns grid display. */
-
-    const n = picturePosts.length;
-    this.columns.left = picturePosts.slice(0, n / 2);
-    this.columns.middle = picturePosts.slice((n / 2), n + 1);
-    this.columns.right = [];
-  }
-
-  threeColumnsFormat(picturePosts = this.photographyPosts) {
-    /* Switching betweem two and three columns grid display. */
-
-    const n = picturePosts.length;
-    this.columns.left = picturePosts.slice(0, n / 3);
-    this.columns.middle = picturePosts.slice((n / 3), (2 * n) / 3);
-    this.columns.right = picturePosts.slice(((2 * n) / 3), n + 1);
+  buildMostPopularArticles(data) {
+    const pop = this.articles.popular;
+    const n = pop.length;
+    let position = 0;
+    for (let i = 0; i < n - 1; i++) {
+      if (data['views'] < pop[i]['views']) {
+        position += 1;
+      }
+    }
+    for (let i = n; i > position; i--) {
+      pop[i] = pop[i - 1];
+    }
+    pop[position] = data;
   }
 
   async presentAlbum(event) {
     /* Opens the modal with more content regarding the post. */
 
     const modal = await this.modalController.create({
-      component: EventModalPage,
+      component: AlbumPage,
       componentProps: {
         evnt: event
       }
@@ -134,101 +169,6 @@ export class HomePage implements OnInit {
     await modal.present();
     const { data } = await modal.onWillDismiss();
     console.log(data);
-  }
-
-  reducePosts(tag) {
-    /* Selecting a tag, the user reduces the number of posts, while the list of pictures
-    is updating the boolean value of its elements' 'hide' attribute. */
-
-    const posts = {tech: this.techPosts, photography: this.photographyPosts};
-    if (tag === 'all') {
-      this.allPosts();
-    } else {
-      const visiblePicturePosts = [];
-      for (const post of posts[this.postsType]) {
-        const postTag = post.tag;
-        if (postTag !== tag) {
-          post.hide = true;
-        } else {
-          visiblePicturePosts.push(post);
-        }
-      }
-      if (this.noColumns === 2) {
-        this.twoColumnsFormat(visiblePicturePosts);
-      } else {
-        this.threeColumnsFormat(visiblePicturePosts);
-      }
-    }
-  }
-
-  allPosts() {
-    /* Selecting the '#all' tag, the user reverts the content to its initial state of '
-    all pictures included in the grid'. */
-
-    const posts = {tech: this.techPosts, photography: this.photographyPosts};
-    for (const post of posts[this.postsType]) {
-      if (post.hide === true) {
-        post.hide = false;
-      }
-    }
-    if (this.noColumns === 2) {
-      if (this.postsType === 'tech') {
-        this.twoColumnsFormat(this.techPosts);
-      } else if (this.postsType === 'about') {
-        this.twoColumnsFormat(this.aboutMePosts);
-      } else {
-        this.twoColumnsFormat();
-      }
-    } else {
-      if (this.postsType === 'tech') {
-        this.threeColumnsFormat(this.techPosts);
-      } else if (this.postsType === 'about') {
-        this.threeColumnsFormat(this.aboutMePosts);
-      } else {
-        this.threeColumnsFormat();
-      }
-    }
-  }
-
-  async presentMenu(ev: any) {
-    const popover = await this.popoverController.create({
-      component: HomeMenuPage,
-      event: ev,
-      translucent: true
-    });
-    await popover.present();
-    const { data } = await popover.onWillDismiss();
-    console.log(data);
-    if (data.tagType == null) {
-      this.postsType = data.postType;
-      if (this.noColumns === 2) {
-        if (this.postsType === 'tech') {
-          this.twoColumnsFormat(this.techPosts);
-          this.initTags(this.techPosts);
-        } else if (this.postsType === 'about') {
-          this.twoColumnsFormat(this.aboutMePosts);
-          this.initTags(this.aboutMePosts);
-        } else {
-          this.twoColumnsFormat();
-          this.initTags();
-        }
-      } else {
-        if (this.postsType === 'tech') {
-          this.threeColumnsFormat(this.techPosts);
-          this.initTags(this.techPosts);
-        } else if (this.postsType === 'about') {
-          this.threeColumnsFormat(this.aboutMePosts);
-          this.initTags(this.aboutMePosts);
-        } else {
-          this.threeColumnsFormat();
-          this.initTags();
-        }
-      }
-    } else if (data.tagType != null) {
-      this.postsType = data.postType;
-      this.reducePosts(data.tagType);
-      this.initTags();
-    }
   }
 
 }

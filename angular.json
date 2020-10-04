@@ -27,7 +27,7 @@
               },
               {
                 "glob": "**/*.svg",
-                "input": "node_modules/@ionic/core/dist/ionic/svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               }
             ],
@@ -180,7 +180,7 @@
   },
   "cli": {
     "defaultCollection": "@ionic/angular-toolkit",
-    "analytics": "5d7e143a-8f5d-492d-aa85-40ee57a73a52"
+    "analytics": "968e6d81-f9ec-4d48-ab5c-76adddf0000f"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

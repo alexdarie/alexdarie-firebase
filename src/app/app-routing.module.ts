@@ -12,18 +12,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'event-modal',
-    loadChildren: () => import('./event-modal/event-modal.module').then( m => m.EventModalPageModule)
-  },
-  {
-    path: 'home-menu',
-    loadChildren: () => import('./home-menu/home-menu.module').then( m => m.HomeMenuPageModule)
-  },
+    path: 'article/:type/:id',
+    loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload' })
   ],
   exports: [RouterModule]
 })

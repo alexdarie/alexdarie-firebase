@@ -1,0 +1,43 @@
+<ion-content fullscreen style="margin-top: 10px">
+  
+  <ion-toolbar style="--background: transparent; margin-top: 20px;">
+    <ion-text color="secondary">
+      <button routerLink='/home' style="background-color: transparent; border: none; outline:none;">
+        <h1 class="site-title unselectable">Alex Darie <span style="font-size: 11px; color: gray">a Z6 story</span></h1>
+      </button>
+    </ion-text>
+    <ion-buttons slot="end" class="toolbar-buttons">
+      <ion-button type="submit" (click)="swipePrev()" *ngIf="article.pictures.length > 0 && !showText">
+        <ion-icon slot="icon-only" ios="chevron-back-outline" md="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button type="submit" (click)="swipeNext()" *ngIf="article.pictures.length > 0 && !showText">
+        <ion-icon slot="icon-only" ios="chevron-forward-outline" md="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="switchBetweenTextAndPhoto()">
+        <ion-icon slot="icon-only" name={{textIconName}}></ion-icon>
+      </ion-button>
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" ios="close" md="contract-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-col class="col-content jump-top">
+    <div class="story-content">
+      <h1 class="event-title">{{article.title}}</h1>
+      <h3>{{article.date}}</h3>
+      <span *ngIf="showText">
+        <p class="paragraph" *ngFor="let d of article.content.paragraphs">{{d}}</p>
+      </span>
+    </div>
+  </ion-col>
+
+  <ion-card style="box-shadow: none !important;" *ngIf="!showText"> 
+    <ion-slides [options]="slideOpts" #slider>
+      <ion-slide *ngFor="let image of article.pictures">
+        <img src={{image}} />
+      </ion-slide>
+    </ion-slides>
+  </ion-card> 
+  
+</ion-content>

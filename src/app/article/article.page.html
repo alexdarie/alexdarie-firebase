@@ -1,0 +1,115 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-text>
+      <button routerLink='/home' style="background-color: transparent; border: none; outline:none;">
+        <h1 class="site-title unselectable">Alex Darie</h1>
+      </button>
+    </ion-text>
+    <ion-buttons slot="end" class="toolbar-buttons">
+      <ion-button href="https://www.linkedin.com/in/adascalitei-alexandru-b48817a4/" target="_blank">
+        <ion-icon class="white-icons" slot="icon-only" name="logo-linkedin"></ion-icon>
+      </ion-button>
+      <ion-button href="https://github.com/alexdarie" target="_blank">
+        <ion-icon class="white-icons" slot="icon-only" name="logo-github"></ion-icon>
+      </ion-button>
+      <ion-button href="https://www.instagram.com/_alexdarie/" target="_blank">
+        <ion-icon class="white-icons" slot="icon-only" ios="logo-instagram" md="logo-instagram"></ion-icon>
+      </ion-button>
+      <ion-button href="https://www.messenger.com/t/alexandru.darie.1" target="_blank">
+        <ion-icon class="white-icons" slot="icon-only" ios="logo-facebook" md="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col style="padding: 0">
+      <div class="parallax" [style.background-image]="article.poster"></div>
+      <div class="article-body">
+        <h1 style="margin-left: 5px;  font-family: 'Gloria Hallelujah', cursive;">
+          {{article.title}}
+        </h1>
+        <ion-row style="margin: -10px 0 0 0;">
+          <p class="author"><span style="color: black">{{article.date}}</span></p>
+          <p style="text-transform: uppercase; font-size: 13px; margin-left: auto; color: gray;">{{article.category}}</p>
+        </ion-row>
+        <ion-row style="margin: -20px 0 0 0;">
+          <p class="author" *ngIf="article.peopleInvolved != null && article.peopleInvolved.length !== 0" style="max-width: 50%;">People involed: <span style="color: black">{{article.peopleInvolved}}</span></p>
+          <p class="author" style="margin-left: auto;">{{article.readTime}} minute read</p>
+        </ion-row>
+        <div style="font-family: 'Open Sans', serif; font-style: oblique; margin-bottom: 35px;" innerHtml="{{article.content.header}}"></div>
+        <div *ngFor="let rule of objectValues(article.content.rules)">
+          <div *ngIf="rule['content'] === 'paragraph'">
+            <div style="font-family: 'Open Sans', serif; margin-bottom: 10px" *ngFor="let index of rule['indexes']" innerHtml="{{article.content.paragraphs[index]}}"></div>
+          </div>
+          <div *ngIf="rule['content'] === 'image'" style="padding: 0; margin: 20px 0 20px 0;">
+            <img src="{{article.media.picture[rule['indexes'][0]]}}">
+            <p class="author" style="text-align: center;" *ngIf="article.photosAuthor != null && article.photosAuthor.length !== 0">Photo: <span style="color: black">{{article.photosAuthor}}</span></p>
+          </div>
+          <div *ngIf="rule['content'] === 'video'">
+            <iframe style="width: 100%; min-height: 370px;" [src]="article.media.video[rule['indexes'][0]] | safe" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div style="padding: 0; margin: 20px 0 20px 0;" *ngIf="rule['content'] === 'slider'">
+            <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide *ngFor="let index of rule['indexes']">
+                <img style="margin: auto;" src={{article.media.picture[index]}}>
+              </ion-slide>
+            </ion-slides>
+          </div>
+        </div>
+      </div>
+      <div class="article-body">
+        <ion-toolbar style="display: flex; flex-direction: row; padding: 0; margin-top: 10px; --background-color: gray">
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" ios="beer" md="beer"></ion-icon>
+            </ion-button>
+            <ion-button>
+              <ion-icon slot="icon-only" ios="paw" md="paw"></ion-icon>
+            </ion-button>
+            <ion-button (click)="share()" style="margin-left: auto">
+              <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </div>
+      <div style="padding: 10px; margin-top: 20px;">
+        <p class="article-body-lg" style="padding-top: 10px; margin-bottom: 10px; text-transform: uppercase; font-family: 'Prata', serif;"><span style="color: gray">Latest</span> Popular Stories</p>
+        <ion-row class="article-body-lg">
+          <ion-col *ngFor="let article of articles.popular.slice(0, 3)">
+            <ion-item lines="none" [routerLink]="['/article', article.category, article.id]" class="ion-activated" class="news-min-width">
+              <ion-col>
+                <img src={{article.media.landscape}} />
+                <ion-card-header>
+                  <ion-card-subtitle class="card-subtitle" style="text-transform: uppercase; font-weight: bold;">{{article.category}}</ion-card-subtitle>
+                  <ion-card-title class="card-title">{{article.title}}</ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content class="card-content">
+                  <div *ngIf="article.content.paragraphs[0] != null" innerHtml="{{article.content.paragraphs[0].substring(0, 110)}}.."></div>
+                </ion-card-content>
+              </ion-col>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-footer>
+    <ion-grid>
+      <ion-row class="posts-centered-container">
+        <ion-col>
+          <p class="card-subtitle">© alexdarie</p>
+        </ion-col>
+        <ion-col class="card-subtitle">
+          <p>Coded with <ion-icon name="logo-ionic"></ion-icon>, <ion-icon name="heart"></ion-icon>, namecheap and <ion-icon name="logo-firebase"></ion-icon>.<br><br>
+          <p>The fastest (and most reliable) way to reach me is on Messenger: </p>
+          <p><a href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
+        </ion-col>
+        <ion-col class="contact-last-col"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+</ion-content>
