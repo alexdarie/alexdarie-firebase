@@ -1,18 +1,5 @@
 # alexdarie-firebase
-Personal website https://alexdarie.me built with Ionic, hosted on Firebase and accessible through Namecheap.
-
-On the master:
-![Firebase console, hosting dashboard][page_demo]
-
-Redesigned version:
-![Firebase console, hosting dashboard][page_demo_redesign]
-
-### Download and Setup
-
-```
-git clone <>
-npm install --save-dev @angular-devkit/build-angular
-```
+A longly postponed blog built with Ionic, hosted on Firebase and accessible through Namecheap.
 
 ### Build Ionic for Browser
 
