@@ -1,5 +1,5 @@
 # alexdarie-firebase
-A long delayed blog built with Ionic, hosted on Firebase and accessible through Namecheap.
+A long delayed blog built with Ionic, Firebase and Namecheap.
 
 ### Build Ionic for Browser
 
