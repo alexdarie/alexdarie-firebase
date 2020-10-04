@@ -39,7 +39,3 @@ add the TXT Record. There are two additional A records which can be faound in th
 [page_demo]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-07-29%20at%204.23.34%20PM.png "Page demo"
 
 [page_demo_redesign]: https://github.com/alexdarie/alexdarie-firebase/blob/master/readme-files/Screen%20Shot%202020-08-04%20at%209.39.10%20PM.png "Page demo redesign"
-
-### Versions
-
-`v1.0` Marks the version with a home page (without menu), 2/3 column-switch in the grid and a footer.
