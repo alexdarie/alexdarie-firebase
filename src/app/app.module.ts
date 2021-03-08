@@ -15,12 +15,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { CommonModule } from '@angular/common';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [CommonModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase), HttpClientModule,
     AngularFirestoreModule],
   providers: [
     StatusBar,

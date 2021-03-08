@@ -25,6 +25,17 @@
     font-family: 'Prata', serif;
 }
 
+.card-title {
+    font-size: 20px;
+    // font-family: 'Bitter', serif;
+    font-family: 'Open Sans', serif;
+    font-weight: 530;
+  }
+
+.card-text-right {
+    text-align: right;
+}
+
 .card-content {
     font-family: 'Open Sans', serif;
 }
@@ -49,9 +60,9 @@ ion-toolbar {
 }
 
 .site-title {
-    margin: 5px 0 0 1vw;
-    font-size: 27px;
-    font-family: 'Gloria Hallelujah', cursive;
+    margin: 7px 0 0 1vw;
+    font-size: 29px;
+    font-family: 'Josefin Sans', sans-serif;
     color: black;
   }
 
@@ -84,13 +95,37 @@ ion-toolbar {
     height: 100%;
 }
 
-// .swiper-slide img {
-//     width: 100%;
-//     height: 70vh;
-// }
+.did-not-give{
+    color: grey;
+}
+
+.gave{
+    color: rgb(252, 186, 3);
+}
 
 .swiper-slide {
     --background: transparent;
+}
+
+.section-title {
+    font-size: 22.5px;
+    // font-family: 'Bitter', serif;
+    font-family: 'Europa-Light', serif;
+    font-weight: bold;
+    color: gray;
+  }
+
+.preview-card {
+    z-index: 3000;
+    margin-top: -2vh;    
+}
+
+.preview-card.full-width {
+    margin: -2vh 0 0 0;
+}
+
+.large-font {
+    font-size: 30px;
 }
 
 @media screen and (min-width: 2000px) {
@@ -138,4 +173,19 @@ ion-toolbar {
     .posts-centered-container {
         margin: 30px 1vw 30px 1vw;
     }
+
+    .contact-last-col {
+        max-width: 5vw;
+      }
 }
+
+@media screen and (max-width: 420px) {
+    .site-title {
+      margin: 5px 0 0 0.5vw;
+      font-size: 20px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  }

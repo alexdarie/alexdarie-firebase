@@ -38,7 +38,7 @@ export class HomePage implements OnInit {
     4: {
       initialSlide: 0,
       speed: 400,
-      slidesPerView: 2.2
+      slidesPerView: 1.8
     }
   };
 
@@ -47,7 +47,7 @@ export class HomePage implements OnInit {
     popular: [],
     tipsAndTricks: [],
     concerts: [],
-    cs: []
+    talks: []
   };
   projectsDescription: string;
   collectionName = 'articles';
@@ -113,16 +113,18 @@ export class HomePage implements OnInit {
 
   processSnapshopDoc(doc) {
     const data = doc.data();
-    if (data['category'] === 'cs') {
-      this.articles.cs.push(data);
-    }
-    else if (data['category'] === 'concert') {
+    if (data['category'] === 'concert') {
       this.articles.concerts.push(data);
+    }
+    else if (data['category'] === 'talks') {
+      // this.addToTalks(data, 3);
+      this.articles.talks.push(data);
     }
     else if (data['category'] === 'tips-and-tricks') {
       this.addToTipsAndTricks(data, 3);
     }
     this.buildMostPopularArticles(data);
+    // console.log(this.articles.popular);
   }
 
   processMetadata(doc) {
@@ -133,7 +135,18 @@ export class HomePage implements OnInit {
   }
 
   addToTipsAndTricks(data, maxPerRow) {
+    // initially, tipsAndTricks is an empty array, later referenced by tt
     const tt = this.articles.tipsAndTricks;
+    const n = tt.length - 1;
+    if (tt.length === 0 || tt[n].length === maxPerRow) {
+      tt.push([data]);
+    } else {
+      tt[n].push(data);
+    }
+  }
+
+  addToTalks(data, maxPerRow) {
+    const tt = this.articles.talks;
     const n = tt.length - 1;
     if (tt.length === 0 || tt[n].length === maxPerRow) {
       tt.push([data]);
@@ -146,8 +159,8 @@ export class HomePage implements OnInit {
     const pop = this.articles.popular;
     const n = pop.length;
     let position = 0;
-    for (let i = 0; i < n - 1; i++) {
-      if (data['views'] < pop[i]['views']) {
+    for (let i = 0; i < n; i++) {
+      if (data['views'] <= pop[i]['views']) {
         position += 1;
       }
     }

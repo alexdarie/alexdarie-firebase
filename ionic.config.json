@@ -1,5 +1,7 @@
 {
   "name": "still_untitiled",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

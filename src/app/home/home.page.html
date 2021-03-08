@@ -2,7 +2,7 @@
   <ion-toolbar class="toolbar">
     <ion-text>
       <button routerLink='/home' style="background-color: transparent; border: none; outline:none;">
-        <h1 class="site-title unselectable">Alex Darie</h1>
+        <h1 class="site-title unselectable">Alexandru Darie</h1>
       </button>
     </ion-text>
     <ion-buttons slot="end" class="toolbar-buttons">
@@ -25,15 +25,15 @@
 <ion-content [fullscreen]="true">
   <div class="slides-centered-container">
     <ion-slides pager="true" [options]="slideOptions[1]">
-      <ion-slide class="slide" *ngFor="let article of articles.popular.slice(0, 5)">
+      <ion-slide class="slide" *ngFor="let article of articles.popular.slice(0, 3)">
         <ion-col style="padding: 0px">
           <div class="preview-image-container">
-            <img src={{article.media.landscape}}>
+            <img src={{article.media.topimage}}>
           </div>
           <ion-card class="preview-card">
             <ion-item>
               <ion-icon name="scan-outline" slot="start"></ion-icon>
-              <ion-label class="card-title">{{article.title}}</ion-label>
+              <ion-label class="news-title">{{article.title}}</ion-label>
               <ion-button shape="block" class="card-subtitle" fill="outline" color="medium" style="border: none; outline:none;" slot="end" [routerLink]="['/article', article.category, article.id]">Read more</ion-button>
             </ion-item>
           </ion-card>
@@ -49,25 +49,52 @@
         [routerLink]="['/article', 'about', '1']">Read more about the projects I am working on<span>
           <ion-icon name="arrow-redo-outline" style="margin-left: 6px; margin-top: 5px;"></ion-icon>
         </span></h5>
-        <p class="about-text unselectable card-subtitle">{{projectsDescription}}</p>
+        <div class="about-text unselectable card-subtitle" innerHtml="{{projectsDescription}}"></div>
       </ion-col>
       <ion-col class="column-bottom-right min-width">
         <ion-row class="row-centered">
           <ion-avatar class="avatar-margin">
-            <img src="../../assets/images/about/alexdarie.jpg">
-            <p class="team-member-name unselectable card-subtitle">Hi there!</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/alexdarie-2251.appspot.com/o/montlyfav%2F35%20mm%20film%2Fsquares%2F000030-2.jpg?alt=media&token=6bf08a01-e96b-4071-be8a-88cc4b2611e4">
+            <p class="team-member-name unselectable card-subtitle">three, two..</p>
           </ion-avatar>
         </ion-row>
       </ion-col>
     </ion-row>
   </div>
 
+  <!-- <div class="posts-centered-container">
+    <ion-row>
+      <ion-col>
+        <div class="">
+          <h3 class="section-title">Talks</h3>
+          <p class="card-subtitle story-max-width">
+            This series of talks focuses on the influence of technology, arts, and education on the personal progress. We wondered how did technology 
+            change careers, to what extent arts influence work, and what are people thinking about their education. At the end of this series, we will 
+            look over their stories as a collective opinion, deciding whether there are common patterns, or things we may apply in our lives.
+          </p>
+        </div>
+        <ion-slides [options]="slideOptions[crntSldOpt]">
+          <ion-slide *ngFor="let article of articles.talks">
+            <ion-card style="margin-bottom: 35px;">
+              <img src={{article.media.square}} tappable [routerLink]="['/article', article.category, article.id]"/>
+              <ion-card-header>
+                <ion-card-title class="card-title card-text-right">
+                  {{article.title}}
+                </ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </div> -->
+
   <div class="posts-centered-container">
     <ion-row>
       <ion-col>
         <div class="">
-          <h3 class="card-title">Photography in general</h3>
-          <p class="card-subtitle">Learn something from my trials and errors</p>
+          <h3 class="section-title">Projects</h3>
+          <p class="card-subtitle story-max-width">In this section, I share my experience with digital and film photography.</p>
         </div>
         <ion-row *ngFor="let row of articles.tipsAndTricks">
           <ion-col *ngFor="let article of row">
@@ -75,17 +102,17 @@
               <ion-col>
                 <img src={{article.image}} tappable [routerLink]="['/article', article.category, article.id]"/>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle" style="text-transform: uppercase; font-weight: bold;">
+                  <!-- <ion-card-subtitle class="card-subtitle" style="text-transform: uppercase; font-weight: bold;">
                     {{article.category}}
-                  </ion-card-subtitle>
-                  <ion-card-title class="card-title">
+                  </ion-card-subtitle> -->
+                  <ion-card-title class="card-title card-text-right">
                     {{article.title}}
                   </ion-card-title>
                 </ion-card-header>
               
-                <ion-card-content class="card-subtitle">
+                <!-- <ion-card-content class="card-subtitle">
                   {{article.content.header.substring(0, 200)}}...
-                </ion-card-content>
+                </ion-card-content> -->
               </ion-col>
             </ion-item>
           </ion-col>
@@ -98,21 +125,21 @@
     <ion-row>
       <ion-col>
         <div class="">
-          <h3 class="card-title">Concert photography</h3>
-          <p class="card-subtitle">This is the journey I took since 2017</p>
+          <h3 class="section-title">Festivals</h3>
+          <p class="card-subtitle story-max-width">The following events were hosted at various locations in Romania. Each post has a story describing my experience as a press photographer.</p>
         </div>
         <ion-slides [options]="slideOptions[crntSldOpt]">
           <ion-slide *ngFor="let article of articles.concerts">
             <ion-card style="margin-bottom: 35px;">
               <img src={{article.media.square}} tappable [routerLink]="['/article', article.category, article.id]"/>
               <ion-card-header>
-                <ion-card-title class="card-title">
+                <ion-card-title class="card-title card-text-right">
                   {{article.title}}
                 </ion-card-title>
               </ion-card-header>
             
-              <ion-card-content class="card-subtitle">
-                {{article.content.header}}
+              <ion-card-content class="card-subtitle card-text-right" style="margin-top: -7px;">
+                {{article.content.header.substring(0, 200)}}
               </ion-card-content>
             </ion-card>
           </ion-slide>
@@ -121,61 +148,18 @@
     </ion-row>
   </div>
 
-  <div class="posts-centered-container">
-    <ion-row>
-      <ion-col>
-        <div class="">
-          <h3 class="card-title">Computer Science</h3>
-          <p class="card-subtitle">How I combine creative thinking with computers programming</p>
-        </div>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <ion-list>
-                <ion-item *ngFor="let article of articles.cs.slice(0, articles.cs.length / 2)">
-                  <ion-thumbnail slot="end">
-                    <img src={{article.image}}>
-                  </ion-thumbnail>
-                  <ion-label>
-                    <h3>Lorem ipsum</h3>
-                    <p>dolor sit amet</p>
-                    <p>consectetur adipiscing elit. Duis ut urna neque.</p>
-                  </ion-label>
-                </ion-item>
-              </ion-list>
-            </ion-col>
-            <ion-col>
-              <ion-list>
-                <ion-item *ngFor="let article of articles.cs.slice(articles.cs.length / 2, articles.cs.length)">
-                  <ion-thumbnail slot="start">
-                    <img src={{article.image}}>
-                  </ion-thumbnail>
-                  <ion-label>
-                    <h3>Lorem ipsum</h3>
-                    <p>dolor sit amet</p>
-                    <p>consectetur adipiscing elit. Duis ut urna neque.</p>
-                  </ion-label>
-                </ion-item>
-              </ion-list>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-col>
-    </ion-row>
-  </div>
-
-  <ion-footer>
+  <ion-footer style="background-color: black">
     <ion-grid>
-      <ion-row class="posts-centered-container">
+      <ion-row class="posts-centered-container" style="background-color: black; color: white">
         <ion-col>
-          <p class="card-subtitle">© alexdarie</p>
+          <p class="card-subtitle">Alexandru Darie</p>
         </ion-col>
         <ion-col class="card-subtitle">
-          <p>Coded myself with <ion-icon name="logo-ionic"></ion-icon>, <ion-icon name="heart"></ion-icon>, namecheap 
+          <p>Coded with <ion-icon name="logo-ionic"></ion-icon>, <ion-icon name="heart"></ion-icon>, namecheap, 
             and <ion-icon name="logo-firebase"></ion-icon>.
           <br><br>
           <p>The fastest (and most reliable) way to reach me is on Messenger: </p>
-          <p><a href="https://www.messenger.com/t/alexandru.darie.1">m.me/alexandru.darie.1</a></p>
+          <p><a href="https://www.messenger.com/t/alexandru.darie.1" style="color: white">m.me/alexandru.darie.1</a></p>
         </ion-col>
         <ion-col class="contact-last-col"></ion-col>
       </ion-row>

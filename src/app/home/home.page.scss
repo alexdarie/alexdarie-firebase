@@ -30,14 +30,18 @@ ion-toolbar {
 }
 
 .site-title {
-  margin: 5px 0 0 1vw;
-  font-size: 27px;
-  font-family: 'Gloria Hallelujah', cursive;
+  margin: 7px 0 0 1vw;
+  font-size: 29px;
+  font-family: 'Josefin Sans', sans-serif;
   color: black;
 }
 
 .title {
   font-family: 'Monofett', cursive; 
+}
+
+.news-title {
+  font-family: 'Open Sans', serif;
 }
 
 .just-site-title {
@@ -50,7 +54,26 @@ ion-toolbar {
 }
 
 .card-title {
-  font-family: 'Prata', serif;
+  font-size: 20px;
+  // font-family: 'Bitter', serif;
+  font-family: 'Open Sans', serif;
+  font-weight: 530;
+}
+
+.section-title {
+  font-size: 22.5px;
+  // font-family: 'Bitter', serif;
+  font-family: 'Europa-Light', serif;
+  font-weight: bold;
+  color: gray;
+}
+
+.card-text-right {
+  text-align: right;
+}
+
+.story-max-width {
+  max-width: 750px;
 }
 
 .unselectable {
@@ -124,7 +147,7 @@ ion-toolbar {
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 3px;
 }
 
@@ -157,6 +180,10 @@ ion-toolbar {
   min-width: 290px;
 }
 
+.hold-resize {
+  max-width: 30%;
+}
+
 @media screen and (min-width: 2000px) {
   .slides-centered-container {
     margin: -15vh 0vw 0px 0vw;
@@ -175,6 +202,24 @@ ion-toolbar {
   }
 }
 
+@media screen and (max-width: 1157px) {
+  .slides-centered-container {
+    margin: -2vh 0vw 0px 0vw;
+  }
+
+  .team-centered-container {
+    margin: 0px 2vw 30px 2vw;
+  }
+
+  .posts-centered-container {
+    margin: 30px 2vw 30px 2vw;
+  }
+
+  .preview-card {
+    width: 30vw;
+  }
+}
+
 @media screen and (max-width: 1125px) {
   .slides-centered-container {
     margin: -2vh 0vw 0px 0vw;
@@ -190,6 +235,10 @@ ion-toolbar {
 
   .preview-card {
     width: 50vw;
+  }
+
+  .hold-resize {
+    max-width: 35%;
   }
 }
 
@@ -210,5 +259,36 @@ ion-toolbar {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hold-resize {
+    max-width: 40%;
+  }
+
+  .contact-last-col {
+    max-width: 5vw;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hold-resize {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .hold-resize {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .site-title {
+    margin: 0 0 0 -1vw;
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 18px;
   }
 }
